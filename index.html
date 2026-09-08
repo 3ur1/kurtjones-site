@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kurt Jones — Director &amp; DOP</title>
+<meta name="description" content="Kurt Jones is a director and director of photography. Music videos, commercial and social campaigns, documentary.">
+<link rel="canonical" href="https://kurtjones.co.uk/">
+<meta property="og:title" content="Kurt Jones — Director &amp; DOP">
+<meta property="og:description" content="Director and director of photography. Music videos, commercial and social campaigns, documentary.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kurtjones.co.uk/">
+<meta name="theme-color" content="#0a0a0a">
+<style>
+:root{
+  --bg:#0a0a0a; --panel:#141414; --fg:#f2f2f2; --muted:#8a8a8a; --dim:#b4b4b4;
+  --line:#232323;
+  --pad-x:clamp(1.25rem,5vw,4.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- header ---------- */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem var(--pad-x);
+  background:rgba(10,10,10,.82);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.wordmark{font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;text-decoration:none}
+.site-nav{display:flex;gap:clamp(1rem,3vw,2.25rem)}
+.site-nav a{
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
+  text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s;
+}
+.site-nav a:hover,.site-nav a:focus-visible{color:#fff;border-color:#fff}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(4rem,14vw,10rem) var(--pad-x) clamp(2.5rem,7vw,5rem)}
+.hero h1{
+  margin:0;font-weight:300;line-height:.92;letter-spacing:.02em;
+  font-size:clamp(3rem,13vw,10rem);
+}
+.hero .role{
+  margin:clamp(1.25rem,3vw,2rem) 0 0;
+  font-size:clamp(.72rem,1.1vw,.85rem);letter-spacing:.36em;text-transform:uppercase;color:var(--muted);
+}
+.hero .blurb{
+  margin:clamp(1.5rem,4vw,2.5rem) 0 0;max-width:46ch;
+  font-size:clamp(.95rem,1.5vw,1.15rem);color:var(--dim);line-height:1.6;
+}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:5rem}
+.sec-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:0 var(--pad-x) clamp(1.25rem,3vw,2rem);
+}
+.sec-head h2{
+  margin:0;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;
+}
+.sec-head .count{font-size:.7rem;letter-spacing:.2em;color:#5c5c5c}
+
+/* ---------- work grid ---------- */
+.grid{
+  display:grid;padding:0 var(--pad-x);
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));
+  gap:clamp(.4rem,1vw,.9rem);
+}
+.tile{
+  position:relative;display:block;width:100%;padding:0;border:0;margin:0;
+  aspect-ratio:16/9;overflow:hidden;background:var(--panel);
+  cursor:pointer;color:inherit;font:inherit;text-align:left;
+}
+.tile[disabled]{cursor:default}
+.tile img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(.85) brightness(.8);
+  transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s ease;
+}
+.tile:hover img,.tile:focus-visible img{transform:scale(1.05);filter:saturate(1) brightness(1)}
+.scrim{
+  position:absolute;inset:0;opacity:.9;transition:opacity .45s ease;
+  background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.28) 48%,rgba(0,0,0,0) 78%);
+}
+.tile:hover .scrim,.tile:focus-visible .scrim{opacity:1}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(.9rem,1.6vw,1.35rem)}
+.cap h3{margin:0;font-size:clamp(.95rem,1.3vw,1.1rem);font-weight:600;letter-spacing:.01em;line-height:1.25}
+.cap p{margin:.3rem 0 0;font-size:clamp(.7rem,.95vw,.79rem);letter-spacing:.05em;color:var(--dim)}
+.play{
+  position:absolute;top:clamp(.9rem,1.6vw,1.35rem);right:clamp(.9rem,1.6vw,1.35rem);
+  width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.6);
+  display:grid;place-items:center;transition:background .35s,border-color .35s;
+}
+.tile:hover .play,.tile:focus-visible .play{background:#fff;border-color:#fff}
+.play svg{width:11px;height:12px;fill:#fff;margin-left:2px;transition:fill .35s}
+.tile:hover .play svg,.tile:focus-visible .play svg{fill:#0a0a0a}
+.noposter{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:
+    radial-gradient(120% 90% at 30% 15%, #1e1e1e 0%, #101010 55%, #0b0b0b 100%);
+  font-size:clamp(2.5rem,6vw,4rem);font-weight:300;letter-spacing:.12em;
+  color:#2f2f2f;
+}
+.soon{
+  position:absolute;top:clamp(.9rem,1.6vw,1.35rem);left:clamp(.9rem,1.6vw,1.35rem);
+  font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:#0a0a0a;background:#f2f2f2;padding:.3rem .5rem;
+}
+.tile:focus{outline:none}
+.tile:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* ---------- behind the scenes ---------- */
+.bts{
+  display:grid;padding:0 var(--pad-x);
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
+  gap:clamp(.4rem,1vw,.9rem);
+}
+.bts figure{margin:0;aspect-ratio:1;overflow:hidden;background:var(--panel)}
+.bts img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.85);
+  transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
+.bts figure:hover img{transform:scale(1.06);filter:saturate(1) brightness(1)}
+
+/* ---------- contact ---------- */
+.contact{padding:clamp(3rem,9vw,7rem) var(--pad-x) clamp(4rem,10vw,7rem);border-top:1px solid var(--line);margin-top:clamp(4rem,10vw,8rem)}
+.contact h2{margin:0 0 1.5rem;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.contact .lead{margin:0 0 2rem;font-size:clamp(1.4rem,4vw,2.6rem);font-weight:300;line-height:1.25;max-width:20ch}
+.cform{max-width:620px;display:grid;gap:1.1rem}
+.cform .row{display:grid;gap:.45rem}
+.cform label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.cform input,.cform textarea{
+  font:inherit;font-size:.95rem;color:var(--fg);
+  background:transparent;border:0;border-bottom:1px solid #3a3a3a;
+  padding:.6rem 0;border-radius:0;transition:border-color .3s;resize:vertical
+}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:#fff}
+.cform input:invalid:not(:placeholder-shown),
+.cform textarea:invalid:not(:placeholder-shown){border-color:#a33}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.send{
+  justify-self:start;margin-top:.6rem;font:inherit;
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  background:transparent;color:var(--fg);border:1px solid #4a4a4a;
+  padding:.85rem 2rem;cursor:pointer;transition:background .3s,color .3s,border-color .3s
+}
+.send:hover,.send:focus-visible{background:#f2f2f2;color:#0a0a0a;border-color:#f2f2f2}
+.send[disabled]{opacity:.5;cursor:default}
+.form-status{margin:.25rem 0 0;font-size:.8rem;color:var(--dim);min-height:1.2em}
+
+.site-foot{
+  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;
+  padding:1.5rem var(--pad-x) 2.5rem;border-top:1px solid var(--line);
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#5c5c5c;
+}
+
+/* ---------- lightbox ---------- */
+dialog.lb{border:0;padding:0;background:transparent;width:min(94vw,1500px);max-width:none;max-height:none}
+dialog.lb::backdrop{background:rgba(0,0,0,.95)}
+.frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.lb-close{
+  position:absolute;top:-2.5rem;right:0;background:none;border:0;color:#fff;cursor:pointer;
+  font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;padding:.4rem;font-family:inherit
+}
+.lb-close:hover{color:#aaa}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .tile img,.scrim,.play,.play svg,.bts img{transition:none}
+  .tile:hover img,.tile:focus-visible img,.bts figure:hover img{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="site-head">
+  <a class="wordmark" href="#top">Kurt Jones</a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#bts">Behind the Scenes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1>Kurt Jones</h1>
+    <p class="role">Director &amp; DOP</p>
+    <p class="blurb">Music videos, commercial and social campaigns, and documentary work — shot and directed across the UK and Europe.</p>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <h2 id="work-h">Selected Work</h2>
+      <span class="count" id="work-count"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="bts" aria-labelledby="bts-h">
+    <div class="sec-head" style="margin-top:clamp(3rem,8vw,6rem)">
+      <h2 id="bts-h">Behind the Scenes</h2>
+    </div>
+    <div class="bts">
+      <figure><img src="https://static.wixstatic.com/media/89cd17_9859c554cd604f6990c0f8adc4e40221~mv2.jpg/v1/fill/w_700,h_700,q_90,enc_auto/x.jpg" alt="Drone shot of a field with coloured smoke during a shoot" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://static.wixstatic.com/media/89cd17_95233b1d072542c98c963ab1dc470c62~mv2.jpg/v1/fill/w_700,h_700,q_90,enc_auto/x.jpg" alt="Camera rig set up in front of a motorcycle on a studio set" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://static.wixstatic.com/media/89cd17_051ddc82171e4409b5f34688f5b0ae3c~mv2.jpg/v1/fill/w_700,h_700,q_90,enc_auto/x.jpg" alt="Musicians performing under magenta stage lighting during filming" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://static.wixstatic.com/media/89cd17_907b32563f8244d1a063c11cdca468f2~mv2.jpg/v1/fill/w_700,h_700,q_90,enc_auto/x.jpg" alt="Crew operating a boom and camera beside a car on location" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://static.wixstatic.com/media/89cd17_d8d7f41553ae4d4792b5111e04ff412b~mv2.jpg/v1/fill/w_700,h_700,q_90,enc_auto/x.jpg" alt="Crew filming an actor on steps outside a red brick building" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <p class="lead">Available for commissions and crew work.</p>
+
+    <!-- Replace FORM_ENDPOINT below with your Formspree endpoint, e.g.
+         https://formspree.io/f/abcdwxyz — no other change needed. -->
+    <form id="contactForm" class="cform" action="FORM_ENDPOINT" method="POST" novalidate>
+      <div class="row">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="row">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="row">
+        <label for="cf-subject">Subject</label>
+        <input id="cf-subject" name="subject" type="text">
+      </div>
+      <div class="row">
+        <label for="cf-msg">Message</label>
+        <textarea id="cf-msg" name="message" rows="5" required></textarea>
+      </div>
+      <!-- honeypot: hidden from people, catches naive bots -->
+      <div class="hp" aria-hidden="true">
+        <label for="cf-company">Company</label>
+        <input id="cf-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="send">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <span>&copy; <span id="yr"></span> Kurt Jones</span>
+  <span>Director &amp; DOP</span>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Video player">
+  <button class="lb-close" type="button" id="lbClose">Close &times;</button>
+  <div class="frame" id="frame"></div>
+</dialog>
+
+<script>
+/* ============================================================
+   THE WORK — the only thing you need to edit.
+   youtube : the ID after youtu.be/ or watch?v=  ('' = Coming soon)
+   poster  : image URL
+   ============================================================ */
+const WORK = [
+  { title:'CLIPZ — Again',
+    meta:'ft. Ms Banks, Ms Dynamite, Jaykae · Camera Operator',
+    youtube:'cR2NJEqdUb8',
+    poster:'https://static.wixstatic.com/media/89cd17_4c3664839c7948dfb97f5461dd609eaa~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.jpg' },
+
+  // Matt Runs — once uploaded to YouTube, paste the ID below and delete the
+  // poster line: the YouTube thumbnail is then used automatically.
+  { title:'New Balance Athlete',
+    meta:'Social Campaign · Director & DOP',
+    youtube:'',
+    poster:'poster-newbalance.jpg' },
+
+  { title:'D4n G3mini — How Things S33m',
+    meta:'Music Video · Director & DOP',
+    youtube:'92Ztc1ABZcg',
+    poster:'https://static.wixstatic.com/media/89cd17_bd09df83612a4feaaef89cebd778a7d8~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' },
+
+  { title:'Out Work',
+    meta:'Push Pump · Music Video',
+    youtube:'c80UAc6-1w4',
+    poster:'https://static.wixstatic.com/media/89cd17_785acc2a157f47459149dfd6ee4ffb96~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' },
+
+  { title:'BRAVE Project',
+    meta:'Building Resilience Against Violence & Extremism',
+    youtube:'tdh5Zi7r3Qs',
+    poster:'https://static.wixstatic.com/media/89cd17_36308937aa79439086a4bff386391b9f~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.jpg' },
+
+  { title:'Ed Fitness',
+    meta:'Social Content · Director & DOP',
+    youtube:'',
+    poster:'https://static.wixstatic.com/media/89cd17_bad79018d8c146298f707b466e0b0071~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' }
+];
+
+const PLAY = '<svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg>';
+
+// Initials for tiles with no artwork yet — better than borrowing another film's still.
+function initials(title) {
+  return title
+    .replace(/[—–-]/g, ' ')
+    .split(/\s+/)
+    .filter(function (w) { return /^[A-Za-z0-9]/.test(w); })
+    .slice(0, 2)
+    .map(function (w) { return w[0].toUpperCase(); })
+    .join('');
+}
+const grid = document.getElementById('grid');
+const lb = document.getElementById('lb');
+const frame = document.getElementById('frame');
+let lastFocus = null;
+
+WORK.forEach(function (it) {
+  const playable = Boolean(it.youtube);
+  const b = document.createElement('button');
+  b.className = 'tile';
+  b.type = 'button';
+  if (!playable) b.disabled = true;
+  b.setAttribute('aria-label', playable
+    ? 'Play ' + it.title + ' — ' + it.meta
+    : it.title + ' — coming soon');
+  // Poster: explicit image, else the YouTube thumbnail, else a typographic card.
+  var poster = it.poster ||
+    (it.youtube ? 'https://i.ytimg.com/vi/' + it.youtube + '/maxresdefault.jpg' : null);
+
+  b.innerHTML =
+    (poster
+      ? '<img src="' + poster + '" alt="' + it.title + '" loading="lazy" decoding="async">'
+      : '<span class="noposter" aria-hidden="true">' + initials(it.title) + '</span>') +
+    '<span class="scrim"></span>' +
+    (playable ? '<span class="play">' + PLAY + '</span>'
+              : '<span class="soon">Coming soon</span>') +
+    '<span class="cap"><h3>' + it.title + '</h3><p>' + it.meta + '</p></span>';
+  if (playable) b.addEventListener('click', function () { openVideo(it, b); });
+  grid.appendChild(b);
+});
+
+document.getElementById('work-count').textContent =
+  WORK.filter(function (w) { return w.youtube; }).length + ' films';
+
+function openVideo(it, trigger) {
+  lastFocus = trigger || null;
+  const url = 'https://www.youtube-nocookie.com/embed/' + it.youtube +
+    '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+  frame.innerHTML = '<iframe src="' + url + '" title="' + it.title +
+    '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+  if (lb.showModal) lb.showModal(); else lb.setAttribute('open', '');
+}
+document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+lb.addEventListener('close', function () {
+  frame.innerHTML = '';
+  if (lastFocus) lastFocus.focus();
+});
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- contact form: AJAX submit, no page redirect ---------- */
+(function () {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (form.action.indexOf('FORM_ENDPOINT') !== -1) {
+      status.textContent = 'Form not configured yet — endpoint missing.';
+      return;
+    }
+    if (!form.checkValidity()) {
+      status.textContent = 'Please fill in your name, email and message.';
+      form.reportValidity();
+      return;
+    }
+
+    const btn = form.querySelector('.send');
+    btn.disabled = true;
+    status.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        status.textContent = 'Thanks — message sent. I’ll be in touch.';
+      } else {
+        status.textContent = 'Something went wrong. Please try again.';
+      }
+    } catch (err) {
+      status.textContent = 'Network error. Please try again.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>

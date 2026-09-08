@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kurtjones.co.uk/sitemap.xml
