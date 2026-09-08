@@ -12,7 +12,8 @@ array near the bottom of that file:
 { title:'Piece name',
   meta:'Credit line',
   youtube:'VIDEO_ID',      // '' shows a "Coming soon" badge
-  poster:'image.jpg' }     // omit to use the YouTube thumbnail
+  poster:'image.jpg',      // omit to use the YouTube thumbnail
+  loop:true }              // optional — replays on end, for cyclical edits
 ```
 
 Pushing to `main` deploys automatically.
