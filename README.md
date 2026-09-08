@@ -5,7 +5,7 @@ Static site, deployed to Cloudflare Workers.
 
 ## Editing
 
-Everything lives in `index.html`. To add or change a film, edit the `WORK`
+Everything lives in `public/index.html`. To add or change a film, edit the `WORK`
 array near the bottom of that file:
 
 ```js
@@ -19,9 +19,12 @@ Pushing to `main` deploys automatically.
 
 ## Files
 
+`wrangler.jsonc` at the repo root tells Cloudflare to serve `public/` as the site.
+
+
 | File | Purpose |
 |---|---|
-| `index.html` | The whole site — markup, styles, script |
-| `poster-newbalance.jpg` | Poster frame for the New Balance tile |
-| `_headers` | Security headers applied by Cloudflare |
-| `robots.txt` / `sitemap.xml` | Search engine basics |
+| `public/index.html` | The whole site — markup, styles, script |
+| `public/poster-newbalance.jpg` | Poster frame for the New Balance tile |
+| `public/_headers` | Security headers applied by Cloudflare |
+| `public/robots.txt` / `sitemap.xml` | Search engine basics |
