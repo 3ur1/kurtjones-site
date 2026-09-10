@@ -465,14 +465,13 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 
 /* ---------- contact form ------------------------------------------------
    Submissions go to Web3Forms, which relays them to the verified address
-   below. Paste the access key here and the form starts working — nothing
-   else needs changing. Until then, Send points people at the email address
-   rather than pretending to have sent anything.
+   below. The access key is not a secret — it only permits sending to that
+   one address, which is why it can sit in public HTML.
 
-   The key is not a secret: it only permits sending to the address it was
-   issued for. Get one at web3forms.com.
+   If sending ever fails, the form says so and shows the email address
+   rather than pretending the message went through.
    ---------------------------------------------------------------------- */
-const ACCESS_KEY = '';
+const ACCESS_KEY = '37763eec-9502-4a15-a266-de8f452ed15e';
 const CONTACT_EMAIL = 'kurt@kurtjones.co.uk';
 
 (function () {
