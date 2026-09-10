@@ -134,6 +134,12 @@ section{scroll-margin-top:5rem}
   transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
 .bts figure:hover img{transform:scale(1.06);filter:saturate(1) brightness(1)}
 
+.sec-note{
+  margin:-.4rem 0 clamp(1.4rem,3vw,2.2rem);
+  font-size:clamp(.72rem,1vw,.8rem);letter-spacing:.04em;line-height:1.5;
+  color:var(--muted);max-width:46ch
+}
+
 /* ---------- contact ---------- */
 .contact{padding:clamp(3rem,9vw,7rem) var(--pad-x) clamp(4rem,10vw,7rem);border-top:1px solid var(--line);margin-top:clamp(4rem,10vw,8rem)}
 .contact h2{margin:0 0 1.5rem;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:500}
@@ -231,6 +237,8 @@ dialog.lb::backdrop{background:rgba(0,0,0,.95)}
       <h2 id="work-h">Selected Work</h2>
       <span class="count" id="work-count"></span>
     </div>
+    <p class="sec-note">Directed, shot and edited by Kurt Jones, except where a
+      different role is credited.</p>
     <div class="grid" id="grid"></div>
   </section>
 
@@ -300,36 +308,43 @@ dialog.lb::backdrop{background:rgba(0,0,0,.95)}
    poster  : image URL
    ============================================================ */
 const WORK = [
+  { title:'Jamch — So Long Old Friend',
+    meta:'Music Video · Charity Collaboration · Director, DOP & Editor',
+    youtube:'MzqBzH9XymY' },   // no poster: the YouTube thumbnail is used
+
   { title:'CLIPZ — Again',
     meta:'ft. Ms Banks, Ms Dynamite, Jaykae · Camera Operator',
-    youtube:'cR2NJEqdUb8',
-    poster:'https://static.wixstatic.com/media/89cd17_4c3664839c7948dfb97f5461dd609eaa~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.jpg' },
+    youtube:'cR2NJEqdUb8' },
 
   { title:'New Balance Athlete',
-    meta:'Social Campaign · Director & DOP',
+    meta:'Social Campaign · Director, DOP & Editor',
     youtube:'pxusq6xePKI',
     loop:true,                      // edit is a seamless cycle — let it run round
     poster:'poster-newbalance.jpg' },
 
   { title:'D4n G3mini — How Things S33m',
-    meta:'Music Video · Director & DOP',
-    youtube:'92Ztc1ABZcg',
-    poster:'https://static.wixstatic.com/media/89cd17_bd09df83612a4feaaef89cebd778a7d8~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' },
-
-  { title:'Out Work',
-    meta:'Push Pump · Music Video',
-    youtube:'c80UAc6-1w4',
-    poster:'https://static.wixstatic.com/media/89cd17_785acc2a157f47459149dfd6ee4ffb96~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' },
+    meta:'Music Video · Director, DOP & Editor',
+    youtube:'92Ztc1ABZcg' },
 
   { title:'BRAVE Project',
-    meta:'Building Resilience Against Violence & Extremism',
-    youtube:'tdh5Zi7r3Qs',
-    poster:'https://static.wixstatic.com/media/89cd17_36308937aa79439086a4bff386391b9f~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.jpg' },
+    meta:'Charity Campaign · Director, DOP & Editor',
+    youtube:'tdh5Zi7r3Qs' },
+
+  { title:'Boomtown Fair — Opening Ceremony',
+    meta:'Festival Film · Chapter 11 · DOP & Editor',
+    youtube:'FYrBRm-G3i0' },
+
+  { title:'Boomtown Fair — Ms Dynamite & Shy FX',
+    meta:'Festival Film · Chapter 11 · DOP & Editor',
+    youtube:'exiDU2i7hkg' },
+
+  { title:'Out Work',
+    meta:'Push Pump · Music Video · Director, DOP & Editor',
+    youtube:'c80UAc6-1w4' },
 
   { title:'Ed Fitness',
-    meta:'Social Content · Director & DOP',
-    youtube:'5tv3cnLpFew',
-    poster:'https://static.wixstatic.com/media/89cd17_bad79018d8c146298f707b466e0b0071~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' }
+    meta:'Social Content · Director, DOP & Editor',
+    youtube:'5tv3cnLpFew' }
 ];
 
 const PLAY = '<svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg>';
