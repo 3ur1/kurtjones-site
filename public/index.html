@@ -305,16 +305,17 @@ dialog.lb::backdrop{background:rgba(0,0,0,.95)}
 /* ============================================================
    THE WORK — the only thing you need to edit.
    youtube : the ID after youtu.be/ or watch?v=  ('' = Coming soon)
-   poster  : image URL
+   poster  : image URL, or omit to use the YouTube thumbnail
    ============================================================ */
 const WORK = [
   { title:'Jamch — So Long Old Friend',
     meta:'Music Video · Charity Collaboration · Director, DOP & Editor',
-    youtube:'MzqBzH9XymY' },   // no poster: the YouTube thumbnail is used
+    youtube:'MzqBzH9XymY' },
 
   { title:'CLIPZ — Again',
     meta:'ft. Ms Banks, Ms Dynamite, Jaykae · Camera Operator',
-    youtube:'cR2NJEqdUb8' },
+    youtube:'cR2NJEqdUb8',
+    poster:'https://static.wixstatic.com/media/89cd17_4c3664839c7948dfb97f5461dd609eaa~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.jpg' },
 
   { title:'New Balance Athlete',
     meta:'Social Campaign · Director, DOP & Editor',
@@ -324,11 +325,13 @@ const WORK = [
 
   { title:'D4n G3mini — How Things S33m',
     meta:'Music Video · Director, DOP & Editor',
-    youtube:'92Ztc1ABZcg' },
+    youtube:'92Ztc1ABZcg',
+    poster:'https://static.wixstatic.com/media/89cd17_bd09df83612a4feaaef89cebd778a7d8~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' },
 
   { title:'BRAVE Project',
     meta:'Charity Campaign · Director, DOP & Editor',
-    youtube:'tdh5Zi7r3Qs' },
+    youtube:'tdh5Zi7r3Qs',
+    poster:'https://static.wixstatic.com/media/89cd17_36308937aa79439086a4bff386391b9f~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.jpg' },
 
   { title:'Boomtown Fair — Opening Ceremony',
     meta:'Festival Film · Chapter 11 · DOP & Editor',
@@ -340,11 +343,13 @@ const WORK = [
 
   { title:'Out Work',
     meta:'Push Pump · Music Video · Director, DOP & Editor',
-    youtube:'c80UAc6-1w4' },
+    youtube:'c80UAc6-1w4',
+    poster:'https://static.wixstatic.com/media/89cd17_785acc2a157f47459149dfd6ee4ffb96~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' },
 
   { title:'Ed Fitness',
     meta:'Social Content · Director, DOP & Editor',
-    youtube:'5tv3cnLpFew' }
+    youtube:'5tv3cnLpFew',
+    poster:'https://static.wixstatic.com/media/89cd17_bad79018d8c146298f707b466e0b0071~mv2.png/v1/fill/w_1000,h_563,al_c,q_90,enc_auto/x.png' }
 ];
 
 const PLAY = '<svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg>';
@@ -373,18 +378,46 @@ WORK.forEach(function (it) {
   b.setAttribute('aria-label', playable
     ? 'Play ' + it.title + ' — ' + it.meta
     : it.title + ' — coming soon');
-  // Poster: explicit image, else the YouTube thumbnail, else a typographic card.
-  var poster = it.poster ||
-    (it.youtube ? 'https://i.ytimg.com/vi/' + it.youtube + '/maxresdefault.jpg' : null);
+
+  // Artwork candidates, best first. YouTube only generates maxresdefault for
+  // videos uploaded at 720p or above, and hq720 is likewise not guaranteed —
+  // hqdefault always exists. Its 4:3 letterboxing is cropped away by
+  // object-fit:cover, so it still fills the 16:9 tile cleanly.
+  var sources = [];
+  if (it.poster) sources.push(it.poster);
+  if (it.youtube) {
+    sources.push('https://i.ytimg.com/vi/' + it.youtube + '/maxresdefault.jpg');
+    sources.push('https://i.ytimg.com/vi/' + it.youtube + '/hq720.jpg');
+    sources.push('https://i.ytimg.com/vi/' + it.youtube + '/hqdefault.jpg');
+  }
 
   b.innerHTML =
-    (poster
-      ? '<img src="' + poster + '" alt="' + it.title + '" loading="lazy" decoding="async">'
+    (sources.length
+      ? '<img src="' + sources[0] + '" alt="' + it.title + '" loading="lazy" decoding="async">'
       : '<span class="noposter" aria-hidden="true">' + initials(it.title) + '</span>') +
     '<span class="scrim"></span>' +
     (playable ? '<span class="play">' + PLAY + '</span>'
               : '<span class="soon">Coming soon</span>') +
     '<span class="cap"><h3>' + it.title + '</h3><p>' + it.meta + '</p></span>';
+
+  // Step down the candidate list on 404, and fall back to a typographic card
+  // if none of them resolve — never leave an empty tile.
+  var img = b.querySelector('img');
+  if (img) {
+    var next = 1;
+    img.addEventListener('error', function () {
+      if (next < sources.length) {
+        img.src = sources[next++];
+      } else {
+        var card = document.createElement('span');
+        card.className = 'noposter';
+        card.setAttribute('aria-hidden', 'true');
+        card.textContent = initials(it.title);
+        img.replaceWith(card);
+      }
+    });
+  }
+
   if (playable) b.addEventListener('click', function () { openVideo(it, b); });
   grid.appendChild(b);
 });
