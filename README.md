@@ -16,11 +16,6 @@ array near the bottom of that file:
   loop:true }              // optional — replays on end, for cyclical edits
 ```
 
-With no `poster`, tile artwork falls back through the YouTube thumbnail sizes:
-`maxresdefault` → `hq720` → `hqdefault`, then a typographic card. Only videos
-uploaded at 720p or above have the first two, so the cascade matters — without
-it those tiles render empty.
-
 Pushing to `main` deploys automatically.
 
 ## Files
