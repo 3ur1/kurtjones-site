@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Facilities, workflow and technical delivery | Kurt Jones</title>
+<meta name="description" content="Kurt Jones has specified, run and repaired production facilities, and works on the network and data centre side that modern production depends on.">
+<link rel="canonical" href="https://kurtjones.co.uk/facilities">
+<meta property="og:title" content="Facilities, workflow and technical delivery | Kurt Jones">
+<meta property="og:description" content="Production facilities, live broadcast workflow and the infrastructure underneath them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kurtjones.co.uk/facilities">
+<meta name="theme-color" content="#0a0a0a">
+<style>
+:root{
+  --bg:#0a0a0a; --panel:#141414; --fg:#f2f2f2; --muted:#8a8a8a; --dim:#b4b4b4;
+  --line:#232323;
+  --pad-x:clamp(1.25rem,5vw,4.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;
+}
+a{color:inherit}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:.5rem;top:.5rem}
+
+/* ---------- header (same as the work page) ---------- */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;
+  padding:1rem var(--pad-x);
+  background:rgba(10,10,10,.82);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.wordmark{font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;text-decoration:none}
+.site-nav{display:flex;flex-wrap:wrap;gap:.4rem clamp(1rem,3vw,2.25rem)}
+.site-nav a{
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);white-space:nowrap;
+  text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s;
+}
+.site-nav a:hover,.site-nav a:focus-visible,.site-nav a[aria-current="page"]{color:#fff;border-color:#fff}
+
+/* ---------- opening ---------- */
+.hero{padding:clamp(4rem,12vw,8.5rem) var(--pad-x) clamp(3rem,8vw,6rem)}
+.hero .role{
+  margin:0 0 clamp(1.25rem,3vw,2rem);
+  font-size:clamp(.72rem,1.1vw,.85rem);letter-spacing:.36em;text-transform:uppercase;color:var(--muted);
+}
+.hero h1{
+  margin:0;font-weight:300;line-height:1.02;letter-spacing:.01em;max-width:16ch;
+  font-size:clamp(2.3rem,7vw,5.6rem);
+}
+.hero .lede{
+  margin:clamp(1.75rem,4vw,2.75rem) 0 0;max-width:52ch;
+  font-size:clamp(1rem,1.6vw,1.2rem);color:var(--dim);line-height:1.6;
+}
+.hero .lede + .lede{margin-top:1rem;color:var(--fg)}
+
+/* ---------- sections: label column on the left, text on the right ---------- */
+.block{
+  display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;
+  padding:clamp(2.5rem,6vw,4.5rem) var(--pad-x);
+  border-top:1px solid var(--line);
+}
+@media (min-width:860px){
+  .block{grid-template-columns:minmax(12rem,1fr) minmax(0,2.4fr);gap:3rem}
+}
+.block h2{
+  margin:0;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;line-height:1.7;
+}
+.block .when{
+  display:block;margin-top:.6rem;font-size:.7rem;letter-spacing:.2em;color:#5c5c5c;
+}
+.body{max-width:62ch;font-size:clamp(.95rem,1.25vw,1.05rem);color:var(--dim);line-height:1.7}
+.body > :first-child{margin-top:0}
+.body > :last-child{margin-bottom:0}
+.body p{margin:0 0 1.1rem}
+.body strong{color:var(--fg);font-weight:600}
+.body ul{margin:0 0 1.1rem;padding:0;list-style:none}
+.body li{position:relative;padding-left:1.4rem;margin:0 0 .75rem}
+.body li::before{content:"";position:absolute;left:0;top:.8em;width:.6rem;height:1px;background:#5c5c5c}
+.body .standout{
+  margin-top:1.75rem;padding-left:1.1rem;border-left:1px solid #f2f2f2;color:var(--fg);
+}
+.body .meta{color:var(--muted)}
+
+/* ---------- contact (same form styling as the work page) ---------- */
+.contact{padding:clamp(3rem,9vw,7rem) var(--pad-x) clamp(4rem,10vw,7rem);border-top:1px solid var(--line)}
+.contact h2{margin:0 0 1.5rem;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.contact .lead{margin:0 0 1rem;font-size:clamp(1.4rem,4vw,2.6rem);font-weight:300;line-height:1.25;max-width:22ch}
+.contact .terms{margin:0 0 .5rem;max-width:52ch;color:var(--dim);line-height:1.6}
+.contact .mail{margin:0 0 2.5rem;color:var(--dim)}
+.contact .mail a{color:var(--fg);text-underline-offset:.2em}
+.cform{max-width:620px;display:grid;gap:1.1rem}
+.cform .row{display:grid;gap:.45rem}
+.cform label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.cform input,.cform textarea{
+  font:inherit;font-size:.95rem;color:var(--fg);
+  background:transparent;border:0;border-bottom:1px solid #3a3a3a;
+  padding:.6rem 0;border-radius:0;transition:border-color .3s;resize:vertical
+}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:#fff}
+.cform input:invalid:not(:placeholder-shown),
+.cform textarea:invalid:not(:placeholder-shown){border-color:#a33}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.send{
+  justify-self:start;margin-top:.6rem;font:inherit;
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  background:transparent;color:var(--fg);border:1px solid #4a4a4a;
+  padding:.85rem 2rem;cursor:pointer;transition:background .3s,color .3s,border-color .3s
+}
+.send:hover,.send:focus-visible{background:#f2f2f2;color:#0a0a0a;border-color:#f2f2f2}
+.send[disabled]{opacity:.5;cursor:default}
+.form-status{margin:.25rem 0 0;font-size:.8rem;color:var(--dim);min-height:1.2em}
+
+.back{
+  display:inline-block;margin-top:clamp(2.5rem,6vw,4rem);
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);white-space:nowrap;
+  text-decoration:none;border-bottom:1px solid #4a4a4a;padding-bottom:.2rem;
+  transition:color .25s,border-color .25s
+}
+.back:hover,.back:focus-visible{color:#fff;border-color:#fff}
+
+.site-foot{
+  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;
+  padding:1.5rem var(--pad-x) 2.5rem;border-top:1px solid var(--line);
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#5c5c5c;
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site-head">
+  <a class="wordmark" href="/">Kurt Jones</a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="/#work">Work</a>
+    <a href="/facilities" aria-current="page">Facilities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="content">
+  <section class="hero">
+    <p class="role">Kurt Jones</p>
+    <h1>Facilities, workflow and technical delivery</h1>
+    <p class="lede">I work where media production meets the infrastructure underneath it. I have specified, run and repaired production facilities, and I have worked on the network and data centre side that modern production depends on.</p>
+    <p class="lede">Most people in this field have one of those halves. I have both.</p>
+  </section>
+
+  <section class="block" aria-labelledby="uwl-h">
+    <h2 id="uwl-h">Running a university media facility
+      <span class="when">University of West London, 2019 to 2025</span></h2>
+    <div class="body">
+      <p>Five years running the film and motion capture studios: studio floor, control room, gallery and post production suites.</p>
+      <ul>
+        <li>Specified and delivered the major equipment upgrades, from requirement through procurement and installation to handover.</li>
+        <li>Maintained the post production estate across the editing and grading suites, and resolved faults for individuals and for whole cohorts.</li>
+        <li>Prepared and calibrated the studio for a range of camera formats and lighting setups, and kept it operating safely.</li>
+        <li>Ran all of it against a teaching timetable. A fault on the day meant an audience already booked in and nowhere for it to go.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="live-h">
+    <h2 id="live-h">Building a distributed live broadcast
+      <span class="when">2020 to 2021</span></h2>
+    <div class="body">
+      <p>When the campus closed, the video journalism course still had a live news programme to produce and air.</p>
+      <p><strong>The problem.</strong> A production built around a physical gallery, with a crew that could no longer be in the same building, and a transmission slot that did not move.</p>
+      <p><strong>What I built.</strong> A remote production workflow that let the crew run the programme with everyone in a different place: contribution, communication, direction and transmission, with the gallery functions distributed rather than abandoned.</p>
+      <p><strong>The outcome.</strong> The programme continued to be produced and aired, on schedule, with the course running as normal.</p>
+      <p class="standout">This is the problem that most of the media technology industry is now selling into. I solved a version of it under a hard deadline with no budget for failure.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="infra-h">
+    <h2 id="infra-h">Infrastructure
+      <span class="when">Network engineer, 2025 to present</span></h2>
+    <div class="body">
+      <p>Field and remote network engineering at carrier and colocation facilities across Europe and North America.</p>
+      <ul>
+        <li>Install, test and troubleshoot network infrastructure on site, isolating faults step by step and recording the diagnosis and the fix.</li>
+        <li>Maintain documentation of system architecture and procedures so recurring issues can be resolved by others.</li>
+      </ul>
+      <p>I am not a network specialist and do not present myself as one. The value is that I can read what is underneath a production system, and talk to the people who own it, without needing a translator.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="teach-h">
+    <h2 id="teach-h">Teaching and client work</h2>
+    <div class="body">
+      <p>Five years teaching and assessing production work at degree level, across camera, lighting, sound and post production, with written and verbal feedback people could act on.</p>
+      <p>Ten years of freelance production alongside it: concept, filming, editing, grading, sound and delivery, always to somebody else's brief and somebody else's deadline.</p>
+      <p>Explaining technical work to someone who is under pressure and does not share your vocabulary is the core of both. It is also the core of technical support.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="ai-h">
+    <h2 id="ai-h">On AI tools</h2>
+    <div class="body">
+      <p>I am highly competent with AI tools and keep current with what they can do.</p>
+      <p>Separately, I am particular about where they belong. They earn their place on the mechanical parts of a job, and the time that frees up goes back into the work that needs judgement.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Working together</h2>
+    <p class="lead">Available full time and remote.</p>
+    <p class="terms">Engagements can be direct or through Kurt Jones Systems Ltd, my UK limited company, whichever is simpler at your end.</p>
+    <p class="mail">Contact: <a href="mailto:kurt@kurtjones.co.uk">kurt@kurtjones.co.uk</a></p>
+
+    <form id="contactForm" class="cform" method="POST" novalidate>
+      <div class="row">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="row">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="row">
+        <label for="cf-subject">Subject</label>
+        <input id="cf-subject" name="subject" type="text">
+      </div>
+      <div class="row">
+        <label for="cf-msg">Message</label>
+        <textarea id="cf-msg" name="message" rows="5" required></textarea>
+      </div>
+      <!-- honeypot: hidden from people, filled by naive bots -->
+      <div class="hp" aria-hidden="true">
+        <label for="cf-company">Company</label>
+        <input id="cf-company" name="botcheck" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="send">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <a class="back" href="/">See the production work</a>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <span>&copy; <span id="yr"></span> Kurt Jones</span>
+  <span>Facilities, workflow and technical delivery</span>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- contact form ------------------------------------------------
+   Same Web3Forms setup as index.html, same access key. The default subject
+   names this page, so enquiries from approach emails are easy to spot.
+   If sending ever fails, the form says so and shows the email address.
+   ---------------------------------------------------------------------- */
+const ACCESS_KEY = '37763eec-9502-4a15-a266-de8f452ed15e';
+const CONTACT_EMAIL = 'kurt@kurtjones.co.uk';
+
+(function () {
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if (!form) return;
+
+  const mailLink = '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a>';
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Bots fill hidden fields; people do not. Fail silently so they learn nothing.
+    if (form.querySelector('[name="botcheck"]').value) return;
+
+    if (!form.checkValidity()) {
+      status.textContent = 'Please fill in your name, email and message.';
+      form.reportValidity();
+      return;
+    }
+
+    const btn = form.querySelector('.send');
+    btn.disabled = true;
+    status.textContent = 'Sending…';
+
+    const payload = {
+      access_key: ACCESS_KEY,
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value || 'Enquiry via kurtjones.co.uk/facilities',
+      message: form.message.value,
+      from_name: 'kurtjones.co.uk/facilities',
+      replyto: form.email.value
+    };
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const out = await res.json().catch(function () { return {}; });
+      if (res.ok && out.success) {
+        form.reset();
+        status.textContent = 'Thank you. Your message has been sent and I will reply by email.';
+      } else {
+        status.innerHTML = 'Your message could not be sent. Please email ' + mailLink + '.';
+      }
+    } catch (err) {
+      status.innerHTML = 'Your message could not be sent. Please email ' + mailLink + '.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -39,7 +39,8 @@ the connector's API is text-only.
 
 | File | Purpose |
 |---|---|
-| `public/index.html` | The whole site — markup, styles, script |
+| `public/index.html` | The work page: markup, styles, script |
+| `public/facilities.html` | Facilities, workflow and technical delivery page, served at `/facilities` |
 | `public/poster-jamch.jpg` | Poster frame for the Jamch tile |
 | `public/poster-newbalance.jpg` | Poster frame for the New Balance tile |
 | `public/_headers` | Security headers applied by Cloudflare |
