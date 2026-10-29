@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Facilities, workflow and technical delivery | Kurt Jones</title>
-<meta name="description" content="Kurt Jones has specified, run and repaired production facilities, and works on the network and data centre side that modern production depends on.">
+<meta name="description" content="Kurt Jones ran university film and motion capture studios for five years and kept a live news programme on air with the crew working remotely. Facilities, workflow and technical delivery.">
 <link rel="canonical" href="https://kurtjones.co.uk/facilities">
 <meta property="og:title" content="Facilities, workflow and technical delivery | Kurt Jones">
 <meta property="og:description" content="Production facilities, live broadcast workflow and the infrastructure underneath them.">
@@ -18,7 +18,7 @@
   --pad-x:clamp(1.25rem,5vw,4.5rem);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:6rem}
 body{
   margin:0;background:var(--bg);color:var(--fg);
   font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -74,7 +74,7 @@ a{color:inherit}
   text-transform:uppercase;color:var(--muted);font-weight:500;line-height:1.7;
 }
 .block .when{
-  display:block;margin-top:.6rem;font-size:.7rem;letter-spacing:.2em;color:#5c5c5c;
+  display:block;margin-top:.6rem;font-size:.7rem;letter-spacing:.2em;color:#808080;
 }
 .body{max-width:62ch;font-size:clamp(.95rem,1.25vw,1.05rem);color:var(--dim);line-height:1.7}
 .body > :first-child{margin-top:0}
@@ -101,22 +101,24 @@ a{color:inherit}
 .cform label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .cform input,.cform textarea{
   font:inherit;font-size:.95rem;color:var(--fg);
-  background:transparent;border:0;border-bottom:1px solid #3a3a3a;
+  background:transparent;border:0;border-bottom:1px solid #646464;
   padding:.6rem 0;border-radius:0;transition:border-color .3s;resize:vertical
 }
-.cform input:focus,.cform textarea:focus{outline:none;border-color:#fff}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:#fff;box-shadow:0 1px 0 0 #fff}
 .cform input:invalid:not(:placeholder-shown),
 .cform textarea:invalid:not(:placeholder-shown){border-color:#a33}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .send{
   justify-self:start;margin-top:.6rem;font:inherit;
   font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
-  background:transparent;color:var(--fg);border:1px solid #4a4a4a;
+  background:transparent;color:var(--fg);border:1px solid #646464;
   padding:.85rem 2rem;cursor:pointer;transition:background .3s,color .3s,border-color .3s
 }
 .send:hover,.send:focus-visible{background:#f2f2f2;color:#0a0a0a;border-color:#f2f2f2}
 .send[disabled]{opacity:.5;cursor:default}
 .form-status{margin:.25rem 0 0;font-size:.8rem;color:var(--dim);min-height:1.2em}
+.form-note{margin:0;font-size:.75rem;color:var(--muted)}
+.form-note a{color:var(--dim);text-underline-offset:.2em}
 
 .back{
   display:inline-block;margin-top:clamp(2.5rem,6vw,4rem);
@@ -129,8 +131,12 @@ a{color:inherit}
 .site-foot{
   display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;
   padding:1.5rem var(--pad-x) 2.5rem;border-top:1px solid var(--line);
-  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#5c5c5c;
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#808080;
 }
+.site-foot a{color:inherit;text-underline-offset:.2em}
+.site-foot a:hover,.site-foot a:focus-visible{color:#fff}
+.site-foot .legal{flex-basis:100%;order:3;max-width:70ch;
+  font-size:.72rem;letter-spacing:.02em;text-transform:none;line-height:1.6}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -192,7 +198,7 @@ a{color:inherit}
         <li>Install, test and troubleshoot network infrastructure on site, isolating faults step by step and recording the diagnosis and the fix.</li>
         <li>Maintain documentation of system architecture and procedures so recurring issues can be resolved by others.</li>
       </ul>
-      <p>I am not a network specialist and do not present myself as one. The value is that I can read what is underneath a production system, and talk to the people who own it, without needing a translator.</p>
+      <p>Networking is the supporting context for my production and facilities work. It means I can read what sits underneath a production system, and talk to the people who own it, without needing a translator.</p>
     </div>
   </section>
 
@@ -200,7 +206,7 @@ a{color:inherit}
     <h2 id="teach-h">Teaching and client work</h2>
     <div class="body">
       <p>Five years teaching and assessing production work at degree level, across camera, lighting, sound and post production, with written and verbal feedback people could act on.</p>
-      <p>Ten years of freelance production alongside it: concept, filming, editing, grading, sound and delivery, always to somebody else's brief and somebody else's deadline.</p>
+      <p>Freelance production alongside it since 2017: concept, filming, editing, grading, sound and delivery, always to somebody else's brief and somebody else's deadline.</p>
       <p>Explaining technical work to someone who is under pressure and does not share your vocabulary is the core of both. It is also the core of technical support.</p>
     </div>
   </section>
@@ -243,6 +249,7 @@ a{color:inherit}
       </div>
       <button type="submit" class="send">Send message</button>
       <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="form-note">Your details are used only to reply to you. See the <a href="/privacy">privacy notice</a>.</p>
     </form>
 
     <a class="back" href="/">See the production work</a>
@@ -251,7 +258,10 @@ a{color:inherit}
 
 <footer class="site-foot">
   <span>&copy; <span id="yr"></span> Kurt Jones</span>
-  <span>Facilities, workflow and technical delivery</span>
+  <a href="/privacy">Privacy</a>
+  <span class="legal">Kurt Jones Systems Ltd. Registered in England and Wales, company number
+    <a href="https://find-and-update.company-information.service.gov.uk/company/16509632">16509632</a>.
+    Registered office: C/O Aardvark Accounting, 1 Cedar Office Park, Cobham Road, Wimborne, England, BH21 7SB.</span>
 </footer>
 
 <script>
