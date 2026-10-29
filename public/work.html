@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Selected work | Kurt Jones</title>
+<meta name="description" content="Selected work by Kurt Jones: music videos, commercial and social campaigns, festival films and documentary. Directed, shot and edited.">
+<link rel="canonical" href="https://kurtjones.co.uk/work">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kurt Jones">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Selected work | Kurt Jones">
+<meta property="og:description" content="Music videos, commercial and social campaigns, festival films and documentary. Directed, shot and edited.">
+<meta property="og:url" content="https://kurtjones.co.uk/work">
+<meta property="og:image" content="https://kurtjones.co.uk/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kurt Jones, editor and media facilities specialist">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+/* Page-specific components for the reel. Tokens, header, footer and form come from /assets/site.css. */
+:root{--fg:var(--paper);--dim:var(--fog);--muted:var(--ash);--bg:var(--ink)}
+main#content{max-width:calc(var(--max) + 2 * var(--pad-x));margin:0 auto}
+/* ---------- hero ---------- */
+.hero{padding:clamp(4rem,14vw,10rem) var(--pad-x) clamp(2.5rem,7vw,5rem)}
+.hero h1{
+  margin:0;font-weight:300;line-height:.92;letter-spacing:.02em;
+  font-size:clamp(2.6rem,7vw,5.6rem);
+}
+.hero .role{
+  margin:clamp(1.25rem,3vw,2rem) 0 0;
+  font-size:clamp(.72rem,1.1vw,.85rem);letter-spacing:.36em;text-transform:uppercase;color:var(--muted);
+}
+.hero .blurb{
+  margin:clamp(1.5rem,4vw,2.5rem) 0 0;max-width:46ch;
+  font-size:clamp(.95rem,1.5vw,1.15rem);color:var(--dim);line-height:1.6;
+}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:5rem}
+.sec-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:0 var(--pad-x) clamp(1.25rem,3vw,2rem);
+}
+.sec-head h2{
+  margin:0;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;
+}
+.sec-head .count{font-size:.7rem;letter-spacing:.2em;color:#808080}
+
+/* ---------- work grid ---------- */
+.grid{
+  display:grid;padding:0 var(--pad-x);
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));
+  gap:clamp(.4rem,1vw,.9rem);
+}
+.tile{
+  position:relative;display:block;width:100%;padding:0;border:0;margin:0;
+  aspect-ratio:16/9;overflow:hidden;background:var(--panel);
+  cursor:pointer;color:inherit;font:inherit;text-align:left;
+}
+.tile[disabled]{cursor:default}
+.tile img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(.85) brightness(.8);
+  transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s ease;
+}
+.tile:hover img,.tile:focus-visible img{transform:scale(1.05);filter:saturate(1) brightness(1)}
+.scrim{
+  position:absolute;inset:0;opacity:.9;transition:opacity .45s ease;
+  background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.28) 48%,rgba(0,0,0,0) 78%);
+}
+.tile:hover .scrim,.tile:focus-visible .scrim{opacity:1}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(.9rem,1.6vw,1.35rem)}
+.cap .t{display:block;margin:0;font-size:clamp(.95rem,1.3vw,1.1rem);font-weight:600;letter-spacing:.01em;line-height:1.25}
+.cap p{display:block;margin:.3rem 0 0;font-size:clamp(.7rem,.95vw,.79rem);letter-spacing:.05em;color:var(--dim)}
+.play{
+  position:absolute;top:clamp(.9rem,1.6vw,1.35rem);right:clamp(.9rem,1.6vw,1.35rem);
+  width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.6);
+  display:grid;place-items:center;transition:background .35s,border-color .35s;
+}
+.tile:hover .play,.tile:focus-visible .play{background:#fff;border-color:#fff}
+.play svg{width:11px;height:12px;fill:#fff;margin-left:2px;transition:fill .35s}
+.tile:hover .play svg,.tile:focus-visible .play svg{fill:#0a0a0a}
+.noposter{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:
+    radial-gradient(120% 90% at 30% 15%, #1e1e1e 0%, #101010 55%, #0b0b0b 100%);
+  font-size:clamp(2.5rem,6vw,4rem);font-weight:300;letter-spacing:.12em;
+  color:#2f2f2f;
+}
+.soon{
+  position:absolute;top:clamp(.9rem,1.6vw,1.35rem);left:clamp(.9rem,1.6vw,1.35rem);
+  font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:#0a0a0a;background:#f2f2f2;padding:.3rem .5rem;
+}
+.tile:focus{outline:none}
+.tile:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* ---------- behind the scenes ---------- */
+.bts{
+  display:grid;padding:0 var(--pad-x);
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
+  gap:clamp(.4rem,1vw,.9rem);
+}
+.bts figure{margin:0;aspect-ratio:1;overflow:hidden;background:var(--panel)}
+.bts img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.85);
+  transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
+.bts figure:hover img{transform:scale(1.06);filter:saturate(1) brightness(1)}
+
+.sec-note{
+  margin:-.4rem var(--pad-x) clamp(1.4rem,3vw,2.2rem);
+  font-size:clamp(.72rem,1vw,.8rem);letter-spacing:.04em;line-height:1.5;
+  color:var(--muted);max-width:46ch
+}
+
+/* ---------- lightbox ---------- */
+/* Width is capped three ways: the viewport, a sane maximum, and — the one that
+   matters — whatever width keeps the 16:9 box inside the viewport HEIGHT. Without
+   that last term a wide player runs off the top and bottom of the screen. */
+dialog.lb{
+  border:0;padding:0;background:transparent;
+  width:min(94vw, 2560px, calc(88vh * 16 / 9));
+  max-width:none;max-height:none
+}
+dialog.lb::backdrop{background:rgba(0,0,0,.95)}
+.frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* Close sits INSIDE the frame, over the video. It cannot be pushed off-screen,
+   and it stays reachable however large the player gets. */
+.lb-close{
+  position:absolute;z-index:2;top:.75rem;right:.75rem;
+  display:flex;align-items:center;justify-content:center;
+  width:2.25rem;height:2.25rem;padding:0;
+  background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.35);border-radius:50%;
+  color:#fff;font:inherit;font-size:1.1rem;line-height:1;cursor:pointer;
+  backdrop-filter:blur(4px);
+  transition:background .25s ease,border-color .25s ease,color .25s ease
+}
+.lb-close:hover,.lb-close:focus-visible{background:#fff;border-color:#fff;color:#0a0a0a}
+.lb-close:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* Quiet hint, so the way out is discoverable without hunting for it. */
+.lb-hint{
+  position:absolute;left:0;right:0;bottom:-1.9rem;text-align:center;
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#7a7a7a;
+  pointer-events:none
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .tile img,.scrim,.play,.play svg,.bts img{transition:none}
+  .tile:hover img,.tile:focus-visible img,.bts figure:hover img{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Kurt Jones, home"><img src="/assets/lockup.svg" alt="Kurt Jones" width="135" height="28"></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/facilities">Facilities</a>
+      <a href="/work" aria-current="page">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <section class="hero">
+    <span class="label">Production and editing</span>
+    <h1>Selected work</h1>
+    <p class="role">Director, DOP and editor</p>
+    <p class="blurb">Music videos, commercial and social campaigns, and documentary work, shot and directed across the UK and Europe. Editing and production are available on retainer or per project.</p>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <h2 id="work-h">Selected Work</h2>
+      <span class="count" id="work-count"></span>
+    </div>
+    <p class="sec-note">Directed, shot and edited by Kurt Jones, except where a
+      different role is credited.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="bts" aria-labelledby="bts-h">
+    <div class="sec-head" style="margin-top:clamp(3rem,8vw,6rem)">
+      <h2 id="bts-h">Behind the Scenes</h2>
+    </div>
+    <div class="bts">
+      <figure><img src="bts/bts-1.jpg" alt="Drone shot of a field with coloured smoke during a shoot" loading="lazy" decoding="async"></figure>
+      <figure><img src="bts/bts-2.jpg" alt="Camera rig set up in front of a motorcycle on a studio set" loading="lazy" decoding="async"></figure>
+      <figure><img src="bts/bts-3.jpg" alt="Musicians performing under magenta stage lighting during filming" loading="lazy" decoding="async"></figure>
+      <figure><img src="bts/bts-4.jpg" alt="Crew operating a boom and camera beside a car on location" loading="lazy" decoding="async"></figure>
+      <figure><img src="bts/bts-5.jpg" alt="Crew filming an actor on steps outside a red brick building" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section id="contact" class="section wrap" aria-labelledby="contact-h" style="margin-top:clamp(4rem,10vw,7rem)">
+    <div class="contact-grid">
+      <div>
+        <span class="label">Contact</span>
+        <h2 id="contact-h" class="big">Available for editing, production and crew work.</h2>
+        <p class="terms">Work can be direct or through Kurt Jones Systems Ltd, my UK limited company, whichever is simpler at your end.</p>
+        <p class="mail"><a href="mailto:kurt@kurtjones.co.uk">kurt@kurtjones.co.uk</a></p>
+        <p class="reply">Replies within one working day</p>
+      </div>
+      <form id="contactForm" class="cform" method="POST" novalidate data-source="kurtjones.co.uk/work">
+        <div class="row">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="row">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="row">
+          <label for="cf-subject">Subject</label>
+          <input id="cf-subject" name="subject" type="text">
+        </div>
+        <div class="row">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" rows="5" required></textarea>
+        </div>
+        <!-- honeypot: hidden from people, filled by naive bots -->
+        <div class="hp" aria-hidden="true">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" name="botcheck" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn primary">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="form-note">Your details are used only to reply to you. See the <a href="/privacy">privacy notice</a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <img class="mark" src="/assets/favicon.svg" alt="" width="28" height="28">
+    <nav aria-label="Footer">
+      <a href="/facilities">Facilities</a>
+      <a href="/work">Work</a>
+      <a href="/#contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p class="legal">&copy; <span data-year></span> Kurt Jones Systems Ltd. Registered in England and Wales, company number
+      <a href="https://find-and-update.company-information.service.gov.uk/company/16509632">16509632</a>.
+      Registered office: C/O Aardvark Accounting, 1 Cedar Office Park, Cobham Road, Wimborne, England, BH21 7SB.</p>
+  </div>
+</footer>
+
+
+<dialog class="lb" id="lb" aria-label="Video player">
+  <div class="frame" id="frame">
+    <button class="lb-close" type="button" id="lbClose" aria-label="Close video">&times;</button>
+    <p class="lb-hint">Press Esc or click outside to close</p>
+  </div>
+</dialog>
+
+<script>
+/* ============================================================
+   THE WORK — the only thing you need to edit.
+   youtube : the ID after youtu.be/ or watch?v=  ('' = Coming soon)
+   poster  : image URL, or omit to use the YouTube thumbnail
+   ============================================================ */
+const WORK = [
+  { title:'Jamch: So Long Old Friend',
+    meta:'Music Video · Charity Collaboration · Director, DOP & Editor',
+    youtube:'MzqBzH9XymY',
+    poster:'poster-jamch.jpg' },   // YouTube generated no artwork for this upload
+
+  { title:'CLIPZ: Again',
+    meta:'ft. Ms Banks, Ms Dynamite, Jaykae · Camera Operator',
+    youtube:'cR2NJEqdUb8',
+    poster:'poster-clipz.jpg' },
+
+  { title:'New Balance Athlete',
+    meta:'Social Campaign · Director, DOP & Editor',
+    youtube:'pxusq6xePKI',
+    loop:true,                      // edit is a seamless cycle — let it run round
+    poster:'poster-newbalance.jpg' },
+
+  { title:'D4n G3mini: How Things S33m',
+    meta:'Music Video · Director, DOP & Editor',
+    youtube:'92Ztc1ABZcg',
+    poster:'poster-howthingsseem.jpg' },
+
+  { title:'BRAVE Project',
+    meta:'Charity Campaign · Director, DOP & Editor',
+    youtube:'tdh5Zi7r3Qs',
+    poster:'poster-brave.jpg' },
+
+  { title:'Boomtown Fair: Opening Ceremony',
+    meta:'Festival Film · Chapter 11 · DOP & Editor',
+    youtube:'FYrBRm-G3i0' },
+
+  { title:'Boomtown Fair: Ms Dynamite & Shy FX',
+    meta:'Festival Film · Chapter 11 · DOP & Editor',
+    youtube:'exiDU2i7hkg' },
+
+  { title:'Out Work',
+    meta:'Push Pump · Music Video · Director, DOP & Editor',
+    youtube:'c80UAc6-1w4',
+    poster:'poster-outwork.jpg' },
+
+  { title:'Ed Fitness',
+    meta:'Social Content · Director, DOP & Editor',
+    youtube:'5tv3cnLpFew',
+    poster:'poster-edfitness.jpg' }
+];
+
+const PLAY = '<svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg>';
+
+// Initials for tiles with no artwork yet — better than borrowing another film's still.
+function initials(title) {
+  return title
+    .replace(/[—–-]/g, ' ')
+    .split(/\s+/)
+    .filter(function (w) { return /^[A-Za-z0-9]/.test(w); })
+    .slice(0, 2)
+    .map(function (w) { return w[0].toUpperCase(); })
+    .join('');
+}
+const grid = document.getElementById('grid');
+const lb = document.getElementById('lb');
+const frame = document.getElementById('frame');
+let lastFocus = null;
+
+WORK.forEach(function (it) {
+  const playable = Boolean(it.youtube);
+  const b = document.createElement('button');
+  b.className = 'tile';
+  b.type = 'button';
+  if (!playable) b.disabled = true;
+  b.setAttribute('aria-label', playable
+    ? 'Play ' + it.title + ', ' + it.meta
+    : it.title + ', coming soon');
+
+  // Artwork candidates, best first. YouTube only generates maxresdefault for
+  // videos uploaded at 720p or above, and hq720 is likewise not guaranteed —
+  // hqdefault always exists. Its 4:3 letterboxing is cropped away by
+  // object-fit:cover, so it still fills the 16:9 tile cleanly.
+  var sources = [];
+  if (it.poster) sources.push(it.poster);
+  if (it.youtube) {
+    sources.push('https://i.ytimg.com/vi/' + it.youtube + '/maxresdefault.jpg');
+    sources.push('https://i.ytimg.com/vi/' + it.youtube + '/hq720.jpg');
+    sources.push('https://i.ytimg.com/vi/' + it.youtube + '/hqdefault.jpg');
+  }
+
+  b.innerHTML =
+    (sources.length
+      ? '<img src="' + sources[0] + '" alt="' + it.title + '" loading="lazy" decoding="async">'
+      : '<span class="noposter" aria-hidden="true">' + initials(it.title) + '</span>') +
+    '<span class="scrim"></span>' +
+    (playable ? '<span class="play">' + PLAY + '</span>'
+              : '<span class="soon">Coming soon</span>') +
+    '<span class="cap"><span class="t">' + it.title + '</span><p>' + it.meta + '</p></span>';
+
+  // Step down the candidate list on 404, and fall back to a typographic card
+  // if none of them resolve — never leave an empty tile.
+  var img = b.querySelector('img');
+  if (img) {
+    var next = 1;
+    img.addEventListener('error', function () {
+      if (next < sources.length) {
+        img.src = sources[next++];
+      } else {
+        var card = document.createElement('span');
+        card.className = 'noposter';
+        card.setAttribute('aria-hidden', 'true');
+        card.textContent = initials(it.title);
+        img.replaceWith(card);
+      }
+    });
+  }
+
+  if (playable) b.addEventListener('click', function () { openVideo(it, b); });
+  grid.appendChild(b);
+});
+
+document.getElementById('work-count').textContent =
+  WORK.filter(function (w) { return w.youtube; }).length + ' films';
+
+function openVideo(it, trigger) {
+  lastFocus = trigger || null;
+  // YouTube picks its own quality, largely from the size of the player box.
+  // We give it the biggest box the screen allows (see dialog.lb in the CSS) and
+  // request hd2160; YouTube treats vq as a hint, not an instruction.
+  let url = 'https://www.youtube-nocookie.com/embed/' + it.youtube +
+    '?autoplay=1&rel=0&modestbranding=1&playsinline=1&vq=hd2160';
+  if (it.loop) url += '&loop=1&playlist=' + it.youtube;
+  const old = frame.querySelector('iframe');
+  if (old) old.remove();
+  const iframe = document.createElement('iframe');
+  iframe.src = url;
+  iframe.title = it.title;
+  iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+  iframe.allowFullscreen = true;
+  frame.insertBefore(iframe, frame.firstChild);
+  if (lb.showModal) lb.showModal(); else lb.setAttribute('open', '');
+}
+document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+lb.addEventListener('close', function () {
+  const iframe = frame.querySelector('iframe');
+  if (iframe) iframe.remove();          // stops playback; keeps the close button
+  if (lastFocus) lastFocus.focus();
+});
+</script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

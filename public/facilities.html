@@ -3,331 +3,332 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Facilities, workflow and technical delivery | Kurt Jones</title>
-<meta name="description" content="Kurt Jones ran university film and motion capture studios for five years and kept a live news programme on air with the crew working remotely. Facilities, workflow and technical delivery.">
+<title>Media facilities and workflow support | Kurt Jones</title>
+<meta name="description" content="Kurt Jones ran university film and motion capture studios for five years and kept a live news programme on air with the crew working apart. Facilities, workflow and technical delivery.">
 <link rel="canonical" href="https://kurtjones.co.uk/facilities">
-<meta property="og:title" content="Facilities, workflow and technical delivery | Kurt Jones">
-<meta property="og:description" content="Production facilities, live broadcast workflow and the infrastructure underneath them.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Kurt Jones">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Media facilities and workflow support | Kurt Jones">
+<meta property="og:description" content="Five years running university film and motion capture studios, and a live news programme kept on air with the crew working apart.">
 <meta property="og:url" content="https://kurtjones.co.uk/facilities">
-<meta name="theme-color" content="#0a0a0a">
-<style>
-:root{
-  --bg:#0a0a0a; --panel:#141414; --fg:#f2f2f2; --muted:#8a8a8a; --dim:#b4b4b4;
-  --line:#232323;
-  --pad-x:clamp(1.25rem,5vw,4.5rem);
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:6rem}
-body{
-  margin:0;background:var(--bg);color:var(--fg);
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;line-height:1.5;
-}
-a{color:inherit}
-.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:.6rem 1rem;z-index:100}
-.skip:focus{left:.5rem;top:.5rem}
-
-/* ---------- header (same as the work page) ---------- */
-.site-head{
-  position:sticky;top:0;z-index:50;
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;
-  padding:1rem var(--pad-x);
-  background:rgba(10,10,10,.82);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.wordmark{font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;text-decoration:none}
-.site-nav{display:flex;flex-wrap:wrap;gap:.4rem clamp(1rem,3vw,2.25rem)}
-.site-nav a{
-  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);white-space:nowrap;
-  text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s;
-}
-.site-nav a:hover,.site-nav a:focus-visible,.site-nav a[aria-current="page"]{color:#fff;border-color:#fff}
-
-/* ---------- opening ---------- */
-.hero{padding:clamp(4rem,12vw,8.5rem) var(--pad-x) clamp(3rem,8vw,6rem)}
-.hero .role{
-  margin:0 0 clamp(1.25rem,3vw,2rem);
-  font-size:clamp(.72rem,1.1vw,.85rem);letter-spacing:.36em;text-transform:uppercase;color:var(--muted);
-}
-.hero h1{
-  margin:0;font-weight:300;line-height:1.02;letter-spacing:.01em;max-width:16ch;
-  font-size:clamp(2.3rem,7vw,5.6rem);
-}
-.hero .lede{
-  margin:clamp(1.75rem,4vw,2.75rem) 0 0;max-width:52ch;
-  font-size:clamp(1rem,1.6vw,1.2rem);color:var(--dim);line-height:1.6;
-}
-.hero .lede + .lede{margin-top:1rem;color:var(--fg)}
-
-/* ---------- sections: label column on the left, text on the right ---------- */
-.block{
-  display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;
-  padding:clamp(2.5rem,6vw,4.5rem) var(--pad-x);
-  border-top:1px solid var(--line);
-}
-@media (min-width:860px){
-  .block{grid-template-columns:minmax(12rem,1fr) minmax(0,2.4fr);gap:3rem}
-}
-.block h2{
-  margin:0;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;
-  text-transform:uppercase;color:var(--muted);font-weight:500;line-height:1.7;
-}
-.block .when{
-  display:block;margin-top:.6rem;font-size:.7rem;letter-spacing:.2em;color:#808080;
-}
-.body{max-width:62ch;font-size:clamp(.95rem,1.25vw,1.05rem);color:var(--dim);line-height:1.7}
-.body > :first-child{margin-top:0}
-.body > :last-child{margin-bottom:0}
-.body p{margin:0 0 1.1rem}
-.body strong{color:var(--fg);font-weight:600}
-.body ul{margin:0 0 1.1rem;padding:0;list-style:none}
-.body li{position:relative;padding-left:1.4rem;margin:0 0 .75rem}
-.body li::before{content:"";position:absolute;left:0;top:.8em;width:.6rem;height:1px;background:#5c5c5c}
-.body .standout{
-  margin-top:1.75rem;padding-left:1.1rem;border-left:1px solid #f2f2f2;color:var(--fg);
-}
-.body .meta{color:var(--muted)}
-
-/* ---------- contact (same form styling as the work page) ---------- */
-.contact{padding:clamp(3rem,9vw,7rem) var(--pad-x) clamp(4rem,10vw,7rem);border-top:1px solid var(--line)}
-.contact h2{margin:0 0 1.5rem;font-size:clamp(.7rem,.95vw,.78rem);letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-weight:500}
-.contact .lead{margin:0 0 1rem;font-size:clamp(1.4rem,4vw,2.6rem);font-weight:300;line-height:1.25;max-width:22ch}
-.contact .terms{margin:0 0 .5rem;max-width:52ch;color:var(--dim);line-height:1.6}
-.contact .mail{margin:0 0 2.5rem;color:var(--dim)}
-.contact .mail a{color:var(--fg);text-underline-offset:.2em}
-.cform{max-width:620px;display:grid;gap:1.1rem}
-.cform .row{display:grid;gap:.45rem}
-.cform label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.cform input,.cform textarea{
-  font:inherit;font-size:.95rem;color:var(--fg);
-  background:transparent;border:0;border-bottom:1px solid #646464;
-  padding:.6rem 0;border-radius:0;transition:border-color .3s;resize:vertical
-}
-.cform input:focus,.cform textarea:focus{outline:none;border-color:#fff;box-shadow:0 1px 0 0 #fff}
-.cform input:invalid:not(:placeholder-shown),
-.cform textarea:invalid:not(:placeholder-shown){border-color:#a33}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.send{
-  justify-self:start;margin-top:.6rem;font:inherit;
-  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
-  background:transparent;color:var(--fg);border:1px solid #646464;
-  padding:.85rem 2rem;cursor:pointer;transition:background .3s,color .3s,border-color .3s
-}
-.send:hover,.send:focus-visible{background:#f2f2f2;color:#0a0a0a;border-color:#f2f2f2}
-.send[disabled]{opacity:.5;cursor:default}
-.form-status{margin:.25rem 0 0;font-size:.8rem;color:var(--dim);min-height:1.2em}
-.form-note{margin:0;font-size:.75rem;color:var(--muted)}
-.form-note a{color:var(--dim);text-underline-offset:.2em}
-
-.back{
-  display:inline-block;margin-top:clamp(2.5rem,6vw,4rem);
-  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);white-space:nowrap;
-  text-decoration:none;border-bottom:1px solid #4a4a4a;padding-bottom:.2rem;
-  transition:color .25s,border-color .25s
-}
-.back:hover,.back:focus-visible{color:#fff;border-color:#fff}
-
-.site-foot{
-  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;
-  padding:1.5rem var(--pad-x) 2.5rem;border-top:1px solid var(--line);
-  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#808080;
-}
-.site-foot a{color:inherit;text-underline-offset:.2em}
-.site-foot a:hover,.site-foot a:focus-visible{color:#fff}
-.site-foot .legal{flex-basis:100%;order:3;max-width:70ch;
-  font-size:.72rem;letter-spacing:.02em;text-transform:none;line-height:1.6}
-
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
-</style>
+<meta property="og:image" content="https://kurtjones.co.uk/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kurt Jones, editor and media facilities specialist">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 
 <header class="site-head">
-  <a class="wordmark" href="/">Kurt Jones</a>
-  <nav class="site-nav" aria-label="Primary">
-    <a href="/#work">Work</a>
-    <a href="/facilities" aria-current="page">Facilities</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Kurt Jones, home"><img src="/assets/lockup.svg" alt="Kurt Jones" width="135" height="28"></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/facilities" aria-current="page">Facilities</a>
+      <a href="/work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main id="content">
-  <section class="hero">
-    <p class="role">Kurt Jones</p>
-    <h1>Facilities, workflow and technical delivery</h1>
-    <p class="lede">I work where media production meets the infrastructure underneath it. I have specified, run and repaired production facilities, and I have worked on the network and data centre side that modern production depends on.</p>
-    <p class="lede">Most people in this field have one of those halves. I have both.</p>
-  </section>
 
-  <section class="block" aria-labelledby="uwl-h">
-    <h2 id="uwl-h">Running a university media facility
-      <span class="when">University of West London, 2019 to 2025</span></h2>
-    <div class="body">
-      <p>Five years running the film and motion capture studios: studio floor, control room, gallery and post production suites.</p>
-      <ul>
-        <li>Specified and delivered the major equipment upgrades, from requirement through procurement and installation to handover.</li>
-        <li>Maintained the post production estate across the editing and grading suites, and resolved faults for individuals and for whole cohorts.</li>
-        <li>Prepared and calibrated the studio for a range of camera formats and lighting setups, and kept it operating safely.</li>
-        <li>Ran all of it against a teaching timetable. A fault on the day meant an audience already booked in and nowhere for it to go.</li>
-      </ul>
+  <!-- ===== opening ===== -->
+  <section class="hero wrap" aria-labelledby="hero-h">
+    <span class="label">Facilities and workflow</span>
+    <h1 id="hero-h">Media facilities and workflow support</h1>
+    <p class="lede">I spent five years running a university's film and motion capture studios, from the studio floor to the post production suites. <strong>I bring the operator's view to the companies that build and support media facilities.</strong></p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="#broadcast">See the live broadcast case</a>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="live-h">
-    <h2 id="live-h">Building a distributed live broadcast
-      <span class="when">2020 to 2021</span></h2>
-    <div class="body">
-      <p>When the campus closed, the video journalism course still had a live news programme to produce and air.</p>
-      <p><strong>The problem.</strong> A production built around a physical gallery, with a crew that could no longer be in the same building, and a transmission slot that did not move.</p>
-      <p><strong>What I built.</strong> A remote production workflow that let the crew run the programme with everyone in a different place: contribution, communication, direction and transmission, with the gallery functions distributed rather than abandoned.</p>
-      <p><strong>The outcome.</strong> The programme continued to be produced and aired, on schedule, with the course running as normal.</p>
-      <p class="standout">This is the problem that most of the media technology industry is now selling into. I solved a version of it under a hard deadline with no budget for failure.</p>
+  <section class="wrap" aria-label="Key facts">
+    <dl class="facts">
+      <div><dt>5 years</dt><dd>running university film and motion capture studios</dd></div>
+      <div><dt>On air</dt><dd>a live news programme kept running with the whole crew working apart</dd></div>
+      <div><dt>Blackmagic</dt><dd>studio moved to Blackmagic Design architecture and Studio Cameras</dd></div>
+      <div><dt>5 years</dt><dd>teaching and assessing production at degree level</dd></div>
+      <div><dt>Since 2017</dt><dd>freelance production, from concept to delivery</dd></div>
+      <div><dt>Since 2025</dt><dd>field and remote work at carrier and colocation facilities across Europe and North America</dd></div>
+    </dl>
+  </section>
+
+  <!-- ===== case study: distributed live broadcast ===== -->
+  <section id="broadcast" class="section wrap" aria-labelledby="broadcast-h" style="margin-top:clamp(3.5rem,8vw,6rem)">
+    <div class="section-head">
+      <span class="label">Case study 01</span>
+      <h2 id="broadcast-h">Kept a live news programme on air with the whole crew working apart</h2>
+      <span class="when">University of West London, 2020 to 2021</span>
+    </div>
+
+    <div class="pao">
+      <div>
+        <h3>The problem</h3>
+        <p>When the campus closed, a video journalism course still had a live news programme to produce and air. It was built around a physical gallery, the crew could no longer share a building, and the transmission slot did not move.</p>
+      </div>
+      <div>
+        <h3>What I built</h3>
+        <p>A remote production workflow that let the crew run the programme with everyone in a different place. Contribution, communication, direction and transmission were distributed, not abandoned.</p>
+      </div>
+      <div>
+        <h3>The outcome</h3>
+        <p>The programme continued to be produced and aired on schedule, semester after semester, with the course running as normal.</p>
+      </div>
+    </div>
+
+    <figure class="figure" aria-labelledby="dia-cap">
+      <div class="canvas">
+        <svg class="landscape" viewBox="0 0 960 440" role="img" aria-labelledby="dlT dlD" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+          <title id="dlT">How the programme stayed on air with the crew working apart</title>
+          <desc id="dlD">Three stages from left to right. Contribution: presenter, reporters and guests, each in their own location, feed the gallery. Direction: the gallery is distributed, with director, vision mixing, sound and graphics each working from a different place. Transmission: the programme goes out on schedule. A talkback band beneath all three stages links the whole crew.</desc>
+          <defs><marker id="arrL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff5247"/></marker></defs>
+          <g font-family="ui-monospace,'Cascadia Mono',Consolas,Menlo,monospace" font-size="12" letter-spacing="1.6" fill="#97968f">
+            <text x="20" y="22">CONTRIBUTION</text><text x="350" y="22">DIRECTION</text><text x="750" y="22">TRANSMISSION</text>
+          </g>
+          <g font-size="16" fill="#f3f2ef">
+            <rect x="20" y="44" width="230" height="64" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="38" y="72">Presenter</text><text x="38" y="94" font-size="13" fill="#bdbcb7">own location</text>
+            <rect x="20" y="124" width="230" height="64" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="38" y="152">Reporters</text><text x="38" y="174" font-size="13" fill="#bdbcb7">own locations</text>
+            <rect x="20" y="204" width="230" height="64" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="38" y="232">Guests</text><text x="38" y="254" font-size="13" fill="#bdbcb7">joined remotely</text>
+          </g>
+          <rect x="330" y="34" width="370" height="250" rx="6" fill="none" stroke="#bdbcb7" stroke-dasharray="6 6"/>
+          <text x="348" y="62" font-size="16" fill="#f3f2ef">The gallery, distributed</text>
+          <g font-size="15" fill="#f3f2ef">
+            <rect x="348" y="78" width="158" height="90" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="364" y="114">Director</text><text x="364" y="136" font-size="13" fill="#bdbcb7">calls the show</text>
+            <rect x="524" y="78" width="158" height="90" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="540" y="114">Vision mixing</text><text x="540" y="136" font-size="13" fill="#bdbcb7">cuts the feeds</text>
+            <rect x="348" y="180" width="158" height="90" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="364" y="216">Sound</text><text x="364" y="238" font-size="13" fill="#bdbcb7">mixes the audio</text>
+            <rect x="524" y="180" width="158" height="90" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+            <text x="540" y="216">Graphics</text><text x="540" y="238" font-size="13" fill="#bdbcb7">captions and titles</text>
+          </g>
+          <rect x="750" y="116" width="190" height="90" rx="4" fill="#1d1d20" stroke="#ff5247" stroke-width="1.5"/>
+          <circle cx="772" cy="146" r="6" fill="#ff5247"/>
+          <text x="788" y="152" font-size="17" fill="#f3f2ef">On air</text>
+          <text x="768" y="182" font-size="13" fill="#bdbcb7">on schedule</text>
+          <g stroke="#ff5247" stroke-width="2" fill="none" marker-end="url(#arrL)">
+            <path d="M250 76 C290 76 290 150 326 155"/><path d="M250 156 L326 160"/><path d="M250 236 C290 236 290 172 326 166"/><path d="M700 161 L746 161"/>
+          </g>
+          <g stroke="#6b6a66" stroke-dasharray="3 4"><line x1="135" y1="268" x2="135" y2="344"/><line x1="515" y1="284" x2="515" y2="344"/><line x1="845" y1="206" x2="845" y2="344"/></g>
+          <rect x="20" y="344" width="920" height="76" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+          <text x="38" y="372" font-family="ui-monospace,'Cascadia Mono',Consolas,Menlo,monospace" font-size="12" letter-spacing="1.6" fill="#97968f">COMMUNICATION</text>
+          <text x="38" y="400" font-size="16" fill="#f3f2ef">Talkback across the whole crew, so everyone stays on the same cue</text>
+        </svg>
+
+        <svg class="portrait" viewBox="0 0 360 700" role="img" aria-labelledby="dpT dpD" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+          <title id="dpT">How the programme stayed on air with the crew working apart</title>
+          <desc id="dpD">Three stages from top to bottom. Contribution: presenter, reporters and guests, each in their own location, feed the gallery. Direction: the gallery is distributed, with director, vision mixing, sound and graphics each working from a different place. Transmission: the programme goes out on schedule. A talkback band links the whole crew.</desc>
+          <defs><marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff5247"/></marker></defs>
+          <g font-family="ui-monospace,'Cascadia Mono',Consolas,Menlo,monospace" font-size="11" letter-spacing="1.4" fill="#97968f">
+            <text x="0" y="14">CONTRIBUTION</text><text x="0" y="146">DIRECTION</text><text x="0" y="466">TRANSMISSION</text><text x="0" y="604">COMMUNICATION</text>
+          </g>
+          <g font-size="14" fill="#f3f2ef">
+            <rect x="0" y="26" width="110" height="60" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="10" y="52">Presenter</text><text x="10" y="72" font-size="11.5" fill="#bdbcb7">own location</text>
+            <rect x="125" y="26" width="110" height="60" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="135" y="52">Reporters</text><text x="135" y="72" font-size="11.5" fill="#bdbcb7">own locations</text>
+            <rect x="250" y="26" width="110" height="60" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="260" y="52">Guests</text><text x="260" y="72" font-size="11.5" fill="#bdbcb7">joined remotely</text>
+          </g>
+          <g stroke="#ff5247" stroke-width="2" fill="none" marker-end="url(#arrP)">
+            <path d="M55 86 L150 154"/><path d="M180 86 L180 154"/><path d="M305 86 L210 154"/>
+          </g>
+          <rect x="0" y="158" width="360" height="262" rx="6" fill="none" stroke="#bdbcb7" stroke-dasharray="6 6"/>
+          <text x="14" y="184" font-size="15" fill="#f3f2ef">The gallery, distributed</text>
+          <g font-size="14" fill="#f3f2ef">
+            <rect x="14" y="198" width="158" height="96" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="28" y="234">Director</text><text x="28" y="256" font-size="12" fill="#bdbcb7">calls the show</text>
+            <rect x="188" y="198" width="158" height="96" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="202" y="234">Vision mixing</text><text x="202" y="256" font-size="12" fill="#bdbcb7">cuts the feeds</text>
+            <rect x="14" y="308" width="158" height="96" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="28" y="344">Sound</text><text x="28" y="366" font-size="12" fill="#bdbcb7">mixes the audio</text>
+            <rect x="188" y="308" width="158" height="96" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="202" y="344">Graphics</text><text x="202" y="366" font-size="12" fill="#bdbcb7">captions and titles</text>
+          </g>
+          <path d="M180 420 L180 474" stroke="#ff5247" stroke-width="2" fill="none" marker-end="url(#arrP)"/>
+          <rect x="60" y="478" width="240" height="80" rx="4" fill="#1d1d20" stroke="#ff5247" stroke-width="1.5"/>
+          <circle cx="84" cy="508" r="6" fill="#ff5247"/><text x="100" y="514" font-size="16" fill="#f3f2ef">On air</text>
+          <text x="80" y="540" font-size="12" fill="#bdbcb7">on schedule</text>
+          <rect x="0" y="614" width="360" height="80" rx="4" fill="#1d1d20" stroke="#6b6a66"/>
+          <text x="14" y="644" font-size="14" fill="#f3f2ef">Talkback across the whole crew,</text>
+          <text x="14" y="666" font-size="14" fill="#f3f2ef">so everyone stays on the same cue</text>
+        </svg>
+      </div>
+      <figcaption id="dia-cap"><strong>How the programme stayed on air.</strong> Each member of the student crew worked from a different location. Contribution, direction and transmission were split across the team, and a shared talkback channel kept everyone on the same cue.</figcaption>
+      <details>
+        <summary>Text version of the diagram</summary>
+        <ol>
+          <li>Contribution: the presenter, reporters and guests each sent their feed from their own location.</li>
+          <li>Direction: the gallery was distributed. Director, vision mixing, sound and graphics each worked from a different place.</li>
+          <li>Transmission: the finished programme went out on schedule.</li>
+          <li>Communication: a talkback channel linked the whole crew throughout.</li>
+        </ol>
+      </details>
+    </figure>
+
+    <p class="standout">This is the problem much of the media technology industry now sells into. I solved a version of it under a hard deadline, with no budget for failure.</p>
+  </section>
+
+  <!-- ===== case study: the facility and its upgrade ===== -->
+  <section id="facility" class="section wrap" aria-labelledby="facility-h">
+    <div class="section-head">
+      <span class="label">Case study 02</span>
+      <h2 id="facility-h">Ran the studios, and moved them to Blackmagic Design architecture</h2>
+      <span class="when">University of West London, 2019 to 2025</span>
+      <p>Five years running the film and motion capture studios against a teaching timetable. A fault on the day meant an audience already booked in and nowhere for it to go.</p>
+    </div>
+
+    <h3>The upgrade, requirement to handover</h3>
+    <ol class="steps">
+      <li><h3>Requirement</h3><p>What teaching and student productions needed from the studio.</p></li>
+      <li><h3>Specification</h3><p>Blackmagic Design architecture and Blackmagic Studio Cameras, chosen to meet it.</p></li>
+      <li><h3>Procurement</h3><p>Through the university's purchasing process.</p></li>
+      <li><h3>Installation</h3><p>Fitted and tested around the teaching timetable.</p></li>
+      <li><h3>Handover</h3><p>Back in service for students and staff.</p></li>
+    </ol>
+    <p class="prose">Alongside the upgrade, I laid the groundwork for virtual production in Unreal Engine.</p>
+
+    <figure class="figure" style="margin-top:2.5rem" aria-labelledby="plan-cap">
+      <div class="plan" role="list" aria-label="The spaces I ran">
+        <div class="floor" role="listitem"><b>Studio floor</b><span>Multi-camera film studio, prepared and calibrated for a range of camera formats and lighting setups</span></div>
+        <div class="gallery" role="listitem"><b>Gallery</b><span>Direction and vision mixing</span></div>
+        <div class="control" role="listitem"><b>Control room</b><span>Sound and engineering</span></div>
+        <div class="post" role="listitem"><b>Post production suites</b><span>Editing and grading, maintained for individuals and for whole cohorts</span></div>
+        <div class="mocap" role="listitem"><b>Motion capture studio</b><span>Capture stage</span></div>
+      </div>
+      <figcaption id="plan-cap"><strong>The spaces I ran.</strong> A schematic, not a floor plan, and not to scale.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ===== capability ===== -->
+  <section id="capability" class="section wrap" aria-labelledby="cap-h">
+    <div class="section-head">
+      <span class="label">What I bring</span>
+      <h2 id="cap-h">Production on one side, the infrastructure underneath on the other</h2>
+      <p>Most people in this field have one of those halves. I have both.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="cap">
+        <thead><tr><th scope="col">Area</th><th scope="col">What I have done</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Facility operations</th><td>Ran the studio floor, control room, gallery and post suites day to day, against a teaching timetable.</td></tr>
+          <tr><th scope="row">Equipment upgrades</th><td>Specified and delivered the major upgrades, from requirement through procurement and installation to handover.</td></tr>
+          <tr><th scope="row">Live and remote production</th><td>Built the distributed workflow that kept a live news programme on air with the crew working apart.</td></tr>
+          <tr><th scope="row">Fault finding and documentation</th><td>Isolate faults step by step and record the diagnosis and the fix, so recurring issues can be solved by others.<span class="ctx">In studios and edit suites, and on site at network facilities.</span></td></tr>
+          <tr><th scope="row">Training and explanation</th><td>Five years teaching and assessing production at degree level, with feedback people could act on.</td></tr>
+          <tr><th scope="row">Infrastructure</th><td>Field and remote network engineering at carrier and colocation facilities across Europe and North America.<span class="ctx">The supporting context for my production and facilities work.</span></td></tr>
+          <tr><th scope="row">Production craft</th><td>Freelance since 2017: concept, filming, editing, grading, sound and delivery, always to somebody else's brief and deadline.</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="infra-h">
-    <h2 id="infra-h">Infrastructure
-      <span class="when">Network engineer, 2025 to present</span></h2>
-    <div class="body">
-      <p>Field and remote network engineering at carrier and colocation facilities across Europe and North America.</p>
-      <ul>
-        <li>Install, test and troubleshoot network infrastructure on site, isolating faults step by step and recording the diagnosis and the fix.</li>
-        <li>Maintain documentation of system architecture and procedures so recurring issues can be resolved by others.</li>
-      </ul>
-      <p>Networking is the supporting context for my production and facilities work. It means I can read what sits underneath a production system, and talk to the people who own it, without needing a translator.</p>
+  <!-- ===== how I work ===== -->
+  <section class="section wrap" aria-labelledby="how-h">
+    <div class="section-head">
+      <span class="label">How I work</span>
+      <h2 id="how-h">Clear about where I add value</h2>
+    </div>
+    <div class="split">
+      <div>
+        <h3>Scope</h3>
+        <p>Networking is the supporting context for my production and facilities work. It means I can read what sits underneath a production system, and talk to the people who own it, without needing a translator.</p>
+        <p>My contribution is design and verification. I use Python and scripting where a task calls for it.</p>
+      </div>
+      <div>
+        <h3>AI tools</h3>
+        <p>I am highly competent with AI tools and keep current with what they can do.</p>
+        <p>Separately, I am particular about where they belong. They earn their place on the mechanical parts of a job, and the time that frees up goes back into the work that needs judgement.</p>
+      </div>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="teach-h">
-    <h2 id="teach-h">Teaching and client work</h2>
-    <div class="body">
-      <p>Five years teaching and assessing production work at degree level, across camera, lighting, sound and post production, with written and verbal feedback people could act on.</p>
-      <p>Freelance production alongside it since 2017: concept, filming, editing, grading, sound and delivery, always to somebody else's brief and somebody else's deadline.</p>
-      <p>Explaining technical work to someone who is under pressure and does not share your vocabulary is the core of both. It is also the core of technical support.</p>
+  <!-- ===== working together ===== -->
+  <section class="section wrap" aria-labelledby="engage-h">
+    <div class="section-head">
+      <span class="label">Working together</span>
+      <h2 id="engage-h">Three ways to work with me</h2>
+      <p>Available full time and remote. Engagements can be direct or through Kurt Jones Systems Ltd, my UK limited company, whichever is simpler at your end.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Support and services</h3>
+        <p>Contract work for media technology companies in support, solutions, services delivery or customer success.</p>
+        <a href="#contact">Start a conversation</a>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Advisory and expert calls</h3>
+        <p>Higher education media facilities, their procurement and operation, and broadcast and post production workflow.</p>
+        <a href="#contact">Book a call</a>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Editing and production</h3>
+        <p>Editing, filming and delivery for brands, agencies and creators, on retainer or per project.</p>
+        <a href="/work">See the work</a>
+      </div>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="ai-h">
-    <h2 id="ai-h">On AI tools</h2>
-    <div class="body">
-      <p>I am highly competent with AI tools and keep current with what they can do.</p>
-      <p>Separately, I am particular about where they belong. They earn their place on the mechanical parts of a job, and the time that frees up goes back into the work that needs judgement.</p>
+  <!-- ===== contact ===== -->
+  <section id="contact" class="section wrap" aria-labelledby="contact-h">
+    <div class="contact-grid">
+      <div>
+        <span class="label">Contact</span>
+        <h2 id="contact-h" class="big">Tell me what you are working on.</h2>
+        <p class="mail"><a href="mailto:kurt@kurtjones.co.uk">kurt@kurtjones.co.uk</a></p>
+        <p class="reply">Replies within one working day</p>
+      </div>
+      <form id="contactForm" class="cform" method="POST" novalidate data-source="kurtjones.co.uk/facilities">
+        <div class="row">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="row">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="row">
+          <label for="cf-subject">Subject</label>
+          <input id="cf-subject" name="subject" type="text">
+        </div>
+        <div class="row">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" rows="5" required></textarea>
+        </div>
+        <!-- honeypot: hidden from people, filled by naive bots -->
+        <div class="hp" aria-hidden="true">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" name="botcheck" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn primary">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="form-note">Your details are used only to reply to you. See the <a href="/privacy">privacy notice</a>.</p>
+      </form>
     </div>
-  </section>
-
-  <section id="contact" class="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h">Working together</h2>
-    <p class="lead">Available full time and remote.</p>
-    <p class="terms">Engagements can be direct or through Kurt Jones Systems Ltd, my UK limited company, whichever is simpler at your end.</p>
-    <p class="mail">Contact: <a href="mailto:kurt@kurtjones.co.uk">kurt@kurtjones.co.uk</a></p>
-
-    <form id="contactForm" class="cform" method="POST" novalidate>
-      <div class="row">
-        <label for="cf-name">Name</label>
-        <input id="cf-name" name="name" type="text" autocomplete="name" required>
-      </div>
-      <div class="row">
-        <label for="cf-email">Email</label>
-        <input id="cf-email" name="email" type="email" autocomplete="email" required>
-      </div>
-      <div class="row">
-        <label for="cf-subject">Subject</label>
-        <input id="cf-subject" name="subject" type="text">
-      </div>
-      <div class="row">
-        <label for="cf-msg">Message</label>
-        <textarea id="cf-msg" name="message" rows="5" required></textarea>
-      </div>
-      <!-- honeypot: hidden from people, filled by naive bots -->
-      <div class="hp" aria-hidden="true">
-        <label for="cf-company">Company</label>
-        <input id="cf-company" name="botcheck" type="text" tabindex="-1" autocomplete="off">
-      </div>
-      <button type="submit" class="send">Send message</button>
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      <p class="form-note">Your details are used only to reply to you. See the <a href="/privacy">privacy notice</a>.</p>
-    </form>
-
-    <a class="back" href="/">See the production work</a>
   </section>
 </main>
 
 <footer class="site-foot">
-  <span>&copy; <span id="yr"></span> Kurt Jones</span>
-  <a href="/privacy">Privacy</a>
-  <span class="legal">Kurt Jones Systems Ltd. Registered in England and Wales, company number
-    <a href="https://find-and-update.company-information.service.gov.uk/company/16509632">16509632</a>.
-    Registered office: C/O Aardvark Accounting, 1 Cedar Office Park, Cobham Road, Wimborne, England, BH21 7SB.</span>
+  <div class="wrap">
+    <img class="mark" src="/assets/favicon.svg" alt="" width="28" height="28">
+    <nav aria-label="Footer">
+      <a href="/facilities">Facilities</a>
+      <a href="/work">Work</a>
+      <a href="/#contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p class="legal">&copy; <span data-year></span> Kurt Jones Systems Ltd. Registered in England and Wales, company number
+      <a href="https://find-and-update.company-information.service.gov.uk/company/16509632">16509632</a>.
+      Registered office: C/O Aardvark Accounting, 1 Cedar Office Park, Cobham Road, Wimborne, England, BH21 7SB.</p>
+  </div>
 </footer>
 
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-/* ---------- contact form ------------------------------------------------
-   Same Web3Forms setup as index.html, same access key. The default subject
-   names this page, so enquiries from approach emails are easy to spot.
-   If sending ever fails, the form says so and shows the email address.
-   ---------------------------------------------------------------------- */
-const ACCESS_KEY = '37763eec-9502-4a15-a266-de8f452ed15e';
-const CONTACT_EMAIL = 'kurt@kurtjones.co.uk';
-
-(function () {
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
-  if (!form) return;
-
-  const mailLink = '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a>';
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    // Bots fill hidden fields; people do not. Fail silently so they learn nothing.
-    if (form.querySelector('[name="botcheck"]').value) return;
-
-    if (!form.checkValidity()) {
-      status.textContent = 'Please fill in your name, email and message.';
-      form.reportValidity();
-      return;
-    }
-
-    const btn = form.querySelector('.send');
-    btn.disabled = true;
-    status.textContent = 'Sending…';
-
-    const payload = {
-      access_key: ACCESS_KEY,
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value || 'Enquiry via kurtjones.co.uk/facilities',
-      message: form.message.value,
-      from_name: 'kurtjones.co.uk/facilities',
-      replyto: form.email.value
-    };
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const out = await res.json().catch(function () { return {}; });
-      if (res.ok && out.success) {
-        form.reset();
-        status.textContent = 'Thank you. Your message has been sent and I will reply by email.';
-      } else {
-        status.innerHTML = 'Your message could not be sent. Please email ' + mailLink + '.';
-      }
-    } catch (err) {
-      status.innerHTML = 'Your message could not be sent. Please email ' + mailLink + '.';
-    } finally {
-      btn.disabled = false;
-    }
-  });
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

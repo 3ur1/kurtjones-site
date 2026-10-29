@@ -1,0 +1,240 @@
+<title>Kurt Jones Brand Identity</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one centred 1120px column of numbered pack sections, dark only, matching the brand itself. */
+:root{
+  color-scheme:dark;
+  --ink:#0b0b0c; --panel:#151517; --raised:#1d1d20; --line:#2c2c30; --control:#6b6a66;
+  --meta:#85847e; --ash:#97968f; --fog:#bdbcb7; --paper:#f3f2ef; --tally:#ff5247;
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--fog);font-family:var(--sans);font-size:16px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.page{max-width:1120px;margin:0 auto;padding-block:clamp(2rem,6vw,4.5rem)}
+h1,h2,h3{color:var(--paper);margin:0;text-wrap:balance}
+h1{font-weight:300;font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.01em}
+h2{font-weight:300;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.15}
+h3{font-size:1.02rem;font-weight:600}
+p{margin:0;max-width:66ch}
+code{font-family:var(--mono);font-size:.82rem;color:var(--paper)}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line)}
+.top .lk{height:30px;width:auto}
+.intro{display:grid;gap:1.25rem;padding-block:clamp(2.5rem,6vw,4rem)}
+.intro .lede{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.55}
+.intro .lede b{color:var(--paper);font-weight:400}
+section{display:grid;gap:1.5rem;padding-block:clamp(2.5rem,6vw,4rem);border-top:1px solid var(--line)}
+.head{display:grid;gap:.6rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.tile{min-width:0;display:grid;gap:.75rem;align-content:start}
+.stage{display:grid;place-items:center;aspect-ratio:4/3;border:1px solid var(--line)}
+.stage.ink{background:var(--ink)} .stage.panel{background:var(--panel)} .stage.paper{background:var(--paper);border-color:var(--paper)}
+.stage .m{width:38%;height:auto}
+.stage .lk{width:min(72%,420px);height:auto}
+.cap{font-size:.88rem}
+.cap b{color:var(--paper);font-weight:600;display:block}
+.wide{grid-column:1/-1}
+.wide .stage{aspect-ratio:auto;padding:clamp(2rem,6vw,4rem) 1rem}
+.sizes{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1.5rem 2rem;padding:1.5rem;background:var(--ink);border:1px solid var(--line)}
+.size{margin:0;display:grid;gap:.5rem;justify-items:start}
+.size .m{width:100%;height:100%}
+.size figcaption{font-family:var(--mono);font-size:.72rem;color:var(--ash)}
+.clear{display:grid;place-items:center;padding:1.5rem;background:var(--ink);border:1px solid var(--line)}
+.clear .box{padding:24px;outline:1px dashed var(--tally)}
+.clear .box .m{width:96px;height:96px;outline:1px solid var(--control)}
+.dont{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}
+.dont .stage{aspect-ratio:1;background:var(--panel);position:relative}
+.dont .stage::after{content:"";position:absolute;inset:12px;background:linear-gradient(to top right,transparent calc(50% - 1px),var(--tally) 50%,transparent calc(50% + 1px))}
+.dont .m{width:46%}
+.sw{display:flex;gap:.9rem;align-items:stretch;min-width:0;background:var(--panel);border:1px solid var(--line)}
+.chipc{width:72px;flex:none;border-right:1px solid var(--line)}
+.swb{display:grid;gap:.15rem;padding:.8rem .8rem .8rem 0;min-width:0;font-size:.86rem}
+.swb b{color:var(--paper);font-weight:600}
+.cr{font-family:var(--mono);font-size:.72rem;color:var(--ash)}
+.pass{color:var(--paper);border:1px solid var(--control);padding:0 .35rem;margin-left:.2rem;white-space:nowrap}
+.na{color:var(--ash);border:1px dashed var(--control);padding:0 .35rem;white-space:nowrap}
+.note{padding:1rem 1.1rem;background:var(--panel);border-left:2px solid var(--tally);font-size:.92rem;max-width:none}
+.note b{color:var(--paper)}
+.spec{display:grid;border-top:1px solid var(--line)}
+.spec > div{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:1rem 2rem;align-items:baseline;padding-block:1.25rem;border-bottom:1px solid var(--line)}
+.spec .meta{font-family:var(--mono);font-size:.72rem;color:var(--ash);line-height:1.5}
+.s-display{font-weight:300;font-size:clamp(2.2rem,5vw,4rem);line-height:1.02;color:var(--paper)}
+.s-h2{font-weight:300;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.15;color:var(--paper)}
+.s-h3{font-weight:600;font-size:1.15rem;color:var(--paper)}
+.s-mono{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+@media (max-width:560px){.spec > div{grid-template-columns:1fr}}
+.kit{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.kitbox{display:grid;gap:1rem;align-content:start;padding:1.4rem;background:var(--panel);border:1px solid var(--line);min-width:0}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn{display:inline-flex;align-items:center;padding:.8rem 1.3rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--control);color:var(--paper)}
+.btn.p{background:var(--tally);border-color:var(--tally);color:var(--ink)}
+.fact{margin:0;border:1px solid var(--line);padding:1.1rem}
+.fact dt{color:var(--paper);font-size:1.8rem;font-weight:300;line-height:1.1}
+.fact dd{margin:.4rem 0 0;font-size:.88rem}
+.door{position:relative;padding:1.4rem;background:var(--raised);border:1px solid var(--control)}
+.door::before{content:"";position:absolute;top:1.1rem;right:1.1rem;width:9px;height:9px;border-radius:50%;background:var(--tally)}
+.door .for{font-family:var(--mono);font-size:.7rem;color:var(--ash)}
+.door h3{font-weight:300;font-size:1.5rem;margin:.6rem 0}
+.door .go{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--paper)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.steps li{border-top:1px solid var(--control);padding-top:.6rem;font-size:.86rem}
+.steps li span{display:block;font-family:var(--mono);font-size:.72rem;color:var(--ash)}
+.steps li:last-child{border-top-color:var(--tally)}
+.steps li:last-child span{color:var(--tally)}
+.dia{overflow-x:auto}
+.dia svg{display:block;width:100%;min-width:520px;height:auto}
+.apps{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.tab{display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;background:var(--raised);border:1px solid var(--line);border-bottom:0;max-width:280px;font-size:.82rem;color:var(--paper)}
+.tab img{width:16px;height:16px}
+.bar{height:34px;background:var(--panel);border:1px solid var(--line)}
+.og{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.phone{display:grid;justify-items:center;gap:.4rem;padding:1.5rem;background:var(--panel);border:1px solid var(--line)}
+.phone img{width:90px;height:90px;border-radius:20px}
+.phone span{font-size:.78rem}
+.voice{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.vbox{padding:1.2rem;background:var(--panel);border:1px solid var(--line);display:grid;gap:.6rem;align-content:start}
+.vbox ul{margin:0;padding-left:1.1rem;display:grid;gap:.45rem;font-size:.92rem}
+.vbox.yes{border-top:2px solid var(--paper)}
+.vbox.no{border-top:2px solid var(--tally)}
+.tablewrap{overflow-x:auto}
+.files{width:100%;border-collapse:collapse;font-size:.9rem}
+.files th,.files td{text-align:left;padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+.files th{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);font-weight:400}
+footer{padding-top:2rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--meta)}
+:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+</style>
+
+<div class="page">
+  <header class="top">
+    {{LOCKUP_TOP}}
+    <span class="label">Brand identity · Version 1 · 29 October 2026</span>
+  </header>
+
+  <div class="intro">
+    <span class="label">Kurt Jones Systems Ltd</span>
+    <h1>Kurt Jones brand identity</h1>
+    <p class="lede">The identity for an editor and media facilities specialist. It is built on one idea, <b>the operator's view</b>: the person in the gallery chair who knows what a facility actually needs from the systems underneath it.</p>
+  </div>
+
+  <section aria-labelledby="s1">
+    <div class="head"><span class="label">01 Strategy</span><h2 id="s1">The operator's view</h2></div>
+    <p>Integrators and installers hand a facility over and leave. Kurt ran one: the studio floor, control room, gallery and post suites at the University of West London for five years. He also kept a live news programme on air when the whole crew had to work apart. The identity borrows its language from the gallery.</p>
+    <div class="grid">
+      <div class="kitbox"><span class="label">Tally light</span><p>Means this is live, look here. One red point marks what matters most, and nothing else is red.</p></div>
+      <div class="kitbox"><span class="label">Signal path</span><p>Shows how one thing feeds the next. Diagrams draw the programme path as the single red line.</p></div>
+      <div class="kitbox"><span class="label">Plain labels</span><p>What a crew reads under pressure. Short, factual, first person. Claim, then evidence.</p></div>
+    </div>
+    <p class="note"><b>Audiences, in order.</b> Support and services managers at media technology vendors, then expert networks, universities and consulting firms, then direct editing and production clients.</p>
+  </section>
+
+  <section aria-labelledby="s2">
+    <div class="head"><span class="label">02 Logo</span><h2 id="s2">A K, a j, and a tally light</h2>
+      <p>The j's dot is the tally light: the one point of colour in the identity. Strokes are square cut on a 48 unit grid. The wordmark is Arial Bold converted to outlines and tracked at 0.16 em, so it never depends on an installed font.</p></div>
+    <div class="grid">
+      <div class="tile"><div class="stage ink">{{M_REV}}</div><p class="cap"><b>Reversed, default</b>Paper strokes, tally dot, on ink</p></div>
+      <div class="tile"><div class="stage paper">{{M_POS}}</div><p class="cap"><b>Positive</b>Ink strokes, tally dot, on paper</p></div>
+      <div class="tile"><div class="stage panel">{{M_W}}</div><p class="cap"><b>One colour, white</b>Embossing, single colour print, watermarks</p></div>
+      <div class="tile"><div class="stage paper">{{M_B}}</div><p class="cap"><b>One colour, black</b>Stamps, engraving, plain print</p></div>
+      <div class="tile wide"><div class="stage ink">{{L_REV}}</div><p class="cap"><b>Lockup, reversed</b>Site header, email signature, documents on dark</p></div>
+      <div class="tile wide"><div class="stage paper">{{L_POS}}</div><p class="cap"><b>Lockup, positive</b>Letterhead, invoices, documents on light</p></div>
+    </div>
+    <div class="grid">
+      <div class="tile"><span class="label">Scale test</span><div class="sizes">{{SIZES}}</div><p class="cap">Reads at 16 px, which is the minimum. The lockup's minimum is 120 px wide.</p></div>
+      <div class="tile"><span class="label">Clear space</span><div class="clear"><div class="box">{{M_CLEAR}}</div></div><p class="cap">Keep a quarter of the mark's height clear on every side, shown by the dashed line.</p></div>
+    </div>
+    <div class="head"><span class="label">Do not</span></div>
+    <div class="dont">
+      <div class="tile"><div class="stage"><svg class="m" viewBox="0 0 48 48" role="img" aria-label="Recoloured strokes, not allowed"><g fill="none" stroke="#5aa9ff" stroke-width="4" stroke-linecap="square"><path d="M9 10V38"/><path d="M25 10L12 24L25 38"/><path d="M35 21V37.5C35 41.5 32.5 43.5 28.5 43.5"/></g><circle cx="35" cy="11.5" r="3.6" fill="#ff5247"/></svg></div><p class="cap">Recolour the strokes</p></div>
+      <div class="tile"><div class="stage"><svg class="m" viewBox="0 0 48 48" role="img" aria-label="Moved dot, not allowed"><g fill="none" stroke="#f3f2ef" stroke-width="4" stroke-linecap="square"><path d="M9 10V38"/><path d="M25 10L12 24L25 38"/><path d="M35 21V37.5C35 41.5 32.5 43.5 28.5 43.5"/></g><circle cx="9" cy="5" r="3.6" fill="#ff5247"/></svg></div><p class="cap">Move or resize the dot</p></div>
+      <div class="tile"><div class="stage"><svg class="m" viewBox="0 0 48 48" role="img" aria-label="Stretched mark, not allowed" preserveAspectRatio="none" style="width:70%;height:34%"><g fill="none" stroke="#f3f2ef" stroke-width="4" stroke-linecap="square"><path d="M9 10V38"/><path d="M25 10L12 24L25 38"/><path d="M35 21V37.5C35 41.5 32.5 43.5 28.5 43.5"/></g><circle cx="35" cy="11.5" r="3.6" fill="#ff5247"/></svg></div><p class="cap">Stretch or rotate it</p></div>
+      <div class="tile"><div class="stage"><span style="font-family:Georgia,serif;font-size:1.6rem;color:var(--paper)">Kurt Jones</span></div><p class="cap">Reset the wordmark in another face</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s3">
+    <div class="head"><span class="label">03 Colour</span><h2 id="s3">Neutrals from ink to paper, one tally red</h2>
+      <p>The greys carry a faint warm bias so they read as chosen, not default. Every text pairing is checked against WCAG 2.2 AA on Ink.</p></div>
+    <div class="grid">{{SWATCHES}}</div>
+    <p class="note"><b>Tally rules.</b> At most one tally element per screen outside diagrams. Never set tally as text on paper, where it fails at 2.86:1. Ink text on a tally fill passes at 6.14:1, and that is the only filled button. Meta drops to 4.48:1 on Raised, so it never sits on Raised.</p>
+  </section>
+
+  <section aria-labelledby="s4">
+    <div class="head"><span class="label">04 Type</span><h2 id="s4">A Swiss sans, and the mono of a timecode display</h2>
+      <p>Helvetica Neue, falling back to Arial, does everything. The monospace appears only on technical labels: step numbers, eyebrows and diagram stage names. A self-hosted brand typeface is an optional upgrade, pending approval.</p></div>
+    <div class="spec">
+      <div><span class="meta">Display<br>clamp 2.6 to 5.6 rem<br>300 · 1.02</span><span class="s-display">Media facilities and workflow support</span></div>
+      <div><span class="meta">H2<br>clamp 1.6 to 2.4 rem<br>300 · 1.15</span><span class="s-h2">Kept a live news programme on air</span></div>
+      <div><span class="meta">H3<br>1.15 rem · 600</span><span class="s-h3">The upgrade, requirement to handover</span></div>
+      <div><span class="meta">Body<br>1 to 1.1 rem · 400 · 1.7<br>66 characters max</span><p>Five years running the film and motion capture studios against a teaching timetable. A fault on the day meant an audience already booked in and nowhere for it to go.</p></div>
+      <div><span class="meta">Label<br>0.72 rem mono<br>uppercase · 0.14 em</span><span class="s-mono">Case study 01 · Transmission</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s5">
+    <div class="head"><span class="label">05 Components</span><h2 id="s5">The kit the site is built from</h2></div>
+    <div class="kit">
+      <div class="kitbox"><span class="label">Buttons</span><div class="btns"><span class="btn p">Get in touch</span><span class="btn">See the work</span></div><p class="cap">One filled tally button per view. Everything else is outlined.</p></div>
+      <div class="kitbox"><span class="label">Key fact</span><dl class="fact"><dt>5 years</dt><dd>running university film and motion capture studios</dd></dl><p class="cap">A short value, then the plain claim it stands for. Real figures only.</p></div>
+      <div class="kitbox"><span class="label">Route card</span><div class="door"><span class="for">For media technology companies</span><h3>Facilities and workflow</h3><span class="go">See the evidence &#8594;</span></div><p class="cap">The lead route carries the tally dot.</p></div>
+      <div class="kitbox"><span class="label">Process steps</span><ol class="steps"><li><span>01</span>Requirement</li><li><span>02</span>Procurement</li><li><span>03</span>Handover</li></ol><p class="cap">Numbers only where order is real. The final step takes the tally.</p></div>
+    </div>
+    <div class="kitbox dia">
+      <span class="label">Diagram style</span>
+      <svg viewBox="0 0 640 150" role="img" aria-label="Diagram style sample: three boxes joined by a red programme path, ending at an on air box">
+        <defs><marker id="pa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff5247"/></marker></defs>
+        <g font-family="ui-monospace,Consolas,Menlo,monospace" font-size="11" letter-spacing="1.4" fill="#97968f"><text x="0" y="14">CONTRIBUTION</text><text x="230" y="14">DIRECTION</text><text x="460" y="14">TRANSMISSION</text></g>
+        <g font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+          <rect x="0" y="30" width="170" height="64" rx="4" fill="#1d1d20" stroke="#6b6a66"/><text x="16" y="58" font-size="15" fill="#f3f2ef">Presenter</text><text x="16" y="80" font-size="12" fill="#bdbcb7">own location</text>
+          <rect x="230" y="22" width="170" height="80" rx="6" fill="none" stroke="#bdbcb7" stroke-dasharray="6 6"/><text x="246" y="58" font-size="15" fill="#f3f2ef">Gallery</text><text x="246" y="80" font-size="12" fill="#bdbcb7">distributed</text>
+          <rect x="460" y="30" width="180" height="64" rx="4" fill="#1d1d20" stroke="#ff5247" stroke-width="1.5"/><circle cx="480" cy="54" r="5" fill="#ff5247"/><text x="494" y="59" font-size="15" fill="#f3f2ef">On air</text><text x="476" y="80" font-size="12" fill="#bdbcb7">on schedule</text>
+        </g>
+        <g stroke="#ff5247" stroke-width="2" fill="none" marker-end="url(#pa)"><path d="M170 62 L226 62"/><path d="M400 62 L456 62"/></g>
+        <text x="0" y="132" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" fill="#97968f">Plain label first, function label under it, stage name above in mono. One red path. Every diagram ships with a caption and a text version.</text>
+      </svg>
+    </div>
+  </section>
+
+  <section aria-labelledby="s6">
+    <div class="head"><span class="label">06 Applications</span><h2 id="s6">Where the identity shows up</h2></div>
+    <div class="apps">
+      <div class="tile"><div><div class="tab"><img src="{{FAV_URI}}" alt="Favicon">Media facilities and workflow support</div><div class="bar"></div></div><p class="cap"><b>Browser tab</b>favicon.svg, the mark on an ink tile</p></div>
+      <div class="tile"><div class="phone"><img src="data:image/png;base64,{{TOUCH}}" alt="Home screen icon"><span>Kurt Jones</span></div><p class="cap"><b>Home screen</b>apple-touch-icon.png, 180 px</p></div>
+      <div class="tile wide"><img class="og" src="data:image/png;base64,{{OG}}" alt="Link preview image: the Kj monogram, Kurt Jones, Editor and media facilities specialist, kurtjones.co.uk" width="1200" height="630"><p class="cap"><b>Link preview</b>og-image.png, 1200 by 630 px, shown when the site is shared in email, LinkedIn or chat</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s7">
+    <div class="head"><span class="label">07 Voice</span><h2 id="s7">Claim, then evidence</h2></div>
+    <div class="voice">
+      <div class="vbox yes"><span class="label">Write</span><ul>
+        <li>"I ran a university's film and motion capture studios for five years."</li>
+        <li>"Networking is the supporting context for my production and facilities work."</li>
+        <li>"I am highly competent with AI tools." Separately: "I am particular about where they belong."</li>
+        <li>UK English, sentence case, first person.</li></ul></div>
+      <div class="vbox no"><span class="label">Never</span><ul>
+        <li>Adjectives doing the work evidence should do.</li>
+        <li>Disclaimers about coding or networking ability.</li>
+        <li>Em dashes or en dashes, anywhere.</li>
+        <li>Location, client site names, invented figures, stock photos, logo walls.</li></ul></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s8">
+    <div class="head"><span class="label">08 Files</span><h2 id="s8">What is in the pack</h2><p>Everything lives in <code>KJ_Website/brand/</code>, with the web copies in <code>public/assets/</code>.</p></div>
+    <div class="tablewrap"><table class="files">
+      <thead><tr><th>File</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td><code>BRAND.md</code></td><td>Strategy and guidelines in full</td></tr>
+        <tr><td><code>kj-mark-reversed.svg</code> · <code>kj-mark-positive.svg</code></td><td>Monogram, dark and light backgrounds</td></tr>
+        <tr><td><code>kj-mark-mono-white.svg</code> · <code>kj-mark-mono-black.svg</code></td><td>One colour applications</td></tr>
+        <tr><td><code>kj-lockup-reversed.svg</code> · <code>kj-lockup-positive.svg</code></td><td>Mark plus outlined wordmark</td></tr>
+        <tr><td><code>favicon.svg</code> · <code>apple-touch-icon.png</code></td><td>Browser tab and home screen</td></tr>
+        <tr><td><code>og-image.png</code></td><td>Link previews, 1200 by 630 px</td></tr>
+        <tr><td><code>site.css</code></td><td>The design system as code: tokens and components</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <footer>Kurt Jones brand identity, version 1. Prepared for Kurt Jones Systems Ltd.</footer>
+</div>
