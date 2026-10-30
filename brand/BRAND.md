@@ -8,7 +8,7 @@ Version 1, 29 October 2026. Covers Kurt Jones, trading as Kurt Jones Systems Ltd
 
 ### Positioning
 
-For media technology companies, and for the universities and production teams they serve, Kurt Jones is the operator who managed a university media facility and built the remote setup that kept its students' live programme on air during the pandemic. Integrators and installers hand a facility over and leave. Kurt brings the view from the gallery chair: what the people using the system actually need from it, and from the companies who support it.
+For media technology companies, and for the universities and production teams they serve, Kurt Jones is the operator who managed a university media facility and helped build the remote setup that kept its students' live programme on air during the pandemic. Integrators and installers hand a facility over and leave. Kurt brings the view from the gallery chair: what the people using the system actually need from it, and from the companies who support it.
 
 ### Brand idea: the operator's view
 
@@ -27,7 +27,7 @@ The visual language comes from the gallery:
 
 - Five years running the University of West London film and motion capture studios: studio floor, control room, gallery and post production suites.
 - Moved the studio to Blackmagic Design architecture with Blackmagic Studio Cameras, and laid the groundwork for virtual production in Unreal Engine.
-- Built the distributed workflow that kept a student live news programme on air, semester after semester, with the crew working apart.
+- Helped build the distributed workflow that kept a student live news programme on air, semester after semester, with the crew working apart.
 - Five years teaching and assessing production at degree level.
 - Freelance production since 2017, from concept to delivery.
 - Field and remote network engineering at carrier and colocation facilities across Europe and North America since 2025, as supporting context.
