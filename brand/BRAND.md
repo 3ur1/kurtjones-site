@@ -25,7 +25,7 @@ The visual language comes from the gallery:
 
 ### Proof points, the only claims the brand makes
 
-- Five years running the University of West London film and motion capture studios: studio floor, control room, gallery and post production suites.
+- Five years running the film and motion capture studios at a UK university: studio floor, control room, gallery and post production suites.
 - Moved the studio to Blackmagic Design architecture with Blackmagic Studio Cameras, and laid the groundwork for virtual production in Unreal Engine.
 - Helped build the distributed workflow that kept a student live news programme on air, semester after semester, with the crew working apart.
 - Five years teaching and assessing production at degree level.
