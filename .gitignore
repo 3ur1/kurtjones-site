@@ -1,0 +1,21 @@
+# Keep secrets and local junk out of push.bat (git add -A).
+
+# Secrets
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
+
+# Tooling
+.wrangler/
+node_modules/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local drafts, never published
+drafts/
